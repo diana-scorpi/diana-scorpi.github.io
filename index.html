@@ -1418,6 +1418,142 @@
             box-shadow: 0 8px 20px rgba(255, 46, 147, 0.3);
         }
 
+        /* Responsive Mobile & Tablet Styles */
+        @media (max-width: 1024px) {
+            .tiktok-cases-grid {
+                grid-template-columns: repeat(3, 1fr) !important;
+            }
+            .cover-layout {
+                grid-template-columns: 1fr;
+                gap: 36px;
+                text-align: center;
+            }
+            .cover-hero-title {
+                font-size: 44px;
+            }
+            .cover-desc {
+                margin: 0 auto 24px auto;
+            }
+            .action-buttons {
+                justify-content: center;
+            }
+            .cover-portrait-wrapper img {
+                height: 420px;
+                max-width: 340px;
+                margin: 0 auto;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .side-nav {
+                display: none !important;
+            }
+            .section-slide {
+                padding: 48px 16px;
+                min-height: auto !important;
+                height: auto !important;
+            }
+            .section-title {
+                font-size: 28px !important;
+                letter-spacing: -0.5px !important;
+            }
+            .section-subtitle {
+                font-size: 14px !important;
+                margin-bottom: 24px !important;
+            }
+            .cover-hero-title {
+                font-size: 34px !important;
+            }
+            .cover-desc {
+                font-size: 13px !important;
+            }
+            .action-buttons {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+            .action-buttons .btn {
+                width: 100%;
+                max-width: 280px;
+                justify-content: center;
+            }
+            .cover-portrait-wrapper img {
+                height: 340px;
+                max-width: 280px;
+            }
+            .about-grid {
+                grid-template-columns: 1fr !important;
+                gap: 16px !important;
+            }
+            .about-grid > div:nth-child(2) {
+                grid-template-columns: 1fr !important;
+            }
+            .metrics-4grid {
+                grid-template-columns: 1fr 1fr !important;
+                gap: 12px !important;
+            }
+            .social-cards-grid {
+                grid-template-columns: 1fr !important;
+                gap: 16px !important;
+            }
+            .demo-analytics-grid {
+                grid-template-columns: 1fr !important;
+                gap: 16px !important;
+            }
+            .achievements-grid {
+                grid-template-columns: 1fr !important;
+                gap: 14px !important;
+            }
+            .tiktok-cases-grid {
+                grid-template-columns: repeat(2, 1fr) !important;
+                gap: 12px !important;
+            }
+            .formats-cards-3grid {
+                grid-template-columns: 1fr !important;
+                gap: 14px !important;
+            }
+            .pricing-cards-3grid {
+                grid-template-columns: 1fr !important;
+                gap: 20px !important;
+            }
+            .pricing-card-featured {
+                transform: none !important;
+            }
+            .reasons-grid {
+                grid-template-columns: 1fr !important;
+                gap: 12px !important;
+            }
+            .workflow-steps-4grid {
+                grid-template-columns: 1fr !important;
+                gap: 14px !important;
+            }
+            .vip-hotline-card {
+                padding: 28px 18px !important;
+            }
+            .vip-social-links-row {
+                flex-direction: column !important;
+                align-items: center !important;
+                gap: 10px !important;
+            }
+            .vip-social-pill {
+                width: 100% !important;
+                max-width: 280px !important;
+                justify-content: center !important;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .metrics-4grid {
+                grid-template-columns: 1fr !important;
+            }
+            .tiktok-cases-grid {
+                grid-template-columns: 1fr !important;
+            }
+            .metric-big-num {
+                font-size: 32px !important;
+            }
+        }
+
         /* Print / Export PDF styles */
         @media print {
             .side-nav, .back-to-top, .toast, .action-buttons, .proof-disclaimer-banner { display: none !important; }
@@ -1964,18 +2100,18 @@
                     <a href="https://t.me/denys_tsy" target="_blank" rel="noopener" class="btn btn-outline" style="width:100%; margin-top: auto;">Замовити Stories ↗</a>
                 </div>
 
-                <!-- TikTok Card -->
+                <!-- TikTok / Instagram Video Card -->
                 <div class="glass-box pricing-card">
-                    <div class="pricing-badge">TikTok</div>
-                    <div class="pricing-price">1400 <span>грн</span></div>
-                    <h3 class="pricing-title">TikTok Відео</h3>
-                    <p class="pricing-desc">Створення та публікація окремого нативного відео з інтеграцією продукції.</p>
+                    <div class="pricing-badge">TikTok / Instagram</div>
+                    <div class="pricing-price">1000 <span>грн</span></div>
+                    <h3 class="pricing-title">TikTok або Instagram Відео</h3>
+                    <p class="pricing-desc">Створення та публікація окремого нативного відео в TikTok або Instagram Reels з інтеграцією продукції.</p>
                     <ul class="pricing-features">
                         <li>🎬 Повний продакшн & сценарій</li>
-                        <li>🔥 Шанс потрапляння в FYP</li>
+                        <li>🔥 Шанс потрапляння в FYP / Reels</li>
                         <li>🎵 Посилання в описі / коментарях</li>
                     </ul>
-                    <a href="https://t.me/denys_tsy" target="_blank" rel="noopener" class="btn btn-outline" style="width:100%; margin-top: auto;">Замовити TikTok ↗</a>
+                    <a href="https://t.me/denys_tsy" target="_blank" rel="noopener" class="btn btn-outline" style="width:100%; margin-top: auto;">Замовити Відео ↗</a>
                 </div>
 
                 <!-- Combo Package Card (BEST VALUE / HIT) -->
