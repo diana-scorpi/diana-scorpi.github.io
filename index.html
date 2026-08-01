@@ -1907,8 +1907,13 @@
     <section id="cases" class="section-slide">
         <div class="container">
             <span class="tag-pill">7. Portfolio</span>
-            <h2 class="section-title">Приклади інтеграцій</h2>
-            <p class="section-subtitle">Реальні рекламні кейси. Натисніть на інтеграцію для перегляду ролика.</p>
+            <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+                <h2 class="section-title" style="margin-bottom: 0;">Приклади інтеграцій</h2>
+                <span style="font-size: 11px; background: rgba(34, 197, 94, 0.15); color: #4ade80; border: 1px solid rgba(34, 197, 94, 0.3); padding: 4px 12px; border-radius: 9999px; font-weight: 700; display: inline-flex; align-items: center; gap: 6px;">
+                    <span style="width: 6px; height: 6px; background: #22c55e; border-radius: 50%; display: inline-block;"></span> Live TikTok Sync
+                </span>
+            </div>
+            <p class="section-subtitle" style="margin-top: 8px;">Реальні рекламні кейси з живим оновленням статистики. Натисніть на інтеграцію для перегляду ролика.</p>
 
             <div class="tiktok-cases-grid" style="grid-template-columns: repeat(5, 1fr); gap: 14px;">
                 <!-- Case 1: ТерноОпіля -->
@@ -1918,8 +1923,8 @@
                         <div class="tiktok-overlay-gradient"></div>
                         <div class="tiktok-badge-category" style="font-size: 9px; padding: 3px 7px;">Food & Beverage</div>
                         <div class="tiktok-stats-bar" style="font-size: 10px; display: flex; justify-content: space-between; gap: 4px;">
-                            <span>👁️ 25.3K</span>
-                            <span>❤️ 657</span>
+                            <span id="views-7665250133474315540">👁️ 25.3K</span>
+                            <span id="likes-7665250133474315540">❤️ 657</span>
                         </div>
                     </div>
                     <div class="tiktok-card-body" style="padding: 12px;">
@@ -1938,8 +1943,8 @@
                         <div class="tiktok-overlay-gradient"></div>
                         <div class="tiktok-badge-category" style="font-size: 9px; padding: 3px 7px;">Events</div>
                         <div class="tiktok-stats-bar" style="font-size: 10px; display: flex; justify-content: space-between; gap: 4px;">
-                            <span>👁️ 20.3K</span>
-                            <span>❤️ 301</span>
+                            <span id="views-7652416548442852629">👁️ 20.3K</span>
+                            <span id="likes-7652416548442852629">❤️ 301</span>
                         </div>
                     </div>
                     <div class="tiktok-card-body" style="padding: 12px;">
@@ -1958,8 +1963,8 @@
                         <div class="tiktok-overlay-gradient"></div>
                         <div class="tiktok-badge-category" style="font-size: 9px; padding: 3px 7px;">Beauty</div>
                         <div class="tiktok-stats-bar" style="font-size: 10px; display: flex; justify-content: space-between; gap: 4px;">
-                            <span>👁️ 13.9K</span>
-                            <span>❤️ 197</span>
+                            <span id="views-7639679991541665045">👁️ 13.9K</span>
+                            <span id="likes-7639679991541665045">❤️ 197</span>
                         </div>
                     </div>
                     <div class="tiktok-card-body" style="padding: 12px;">
@@ -1978,8 +1983,8 @@
                         <div class="tiktok-overlay-gradient"></div>
                         <div class="tiktok-badge-category" style="font-size: 9px; padding: 3px 7px;">Perfumery</div>
                         <div class="tiktok-stats-bar" style="font-size: 10px; display: flex; justify-content: space-between; gap: 4px;">
-                            <span>👁️ 25.2K</span>
-                            <span>❤️ 476</span>
+                            <span id="views-7625945472674417941">👁️ 25.2K</span>
+                            <span id="likes-7625945472674417941">❤️ 476</span>
                         </div>
                     </div>
                     <div class="tiktok-card-body" style="padding: 12px;">
@@ -1998,8 +2003,8 @@
                         <div class="tiktok-overlay-gradient"></div>
                         <div class="tiktok-badge-category" style="font-size: 9px; padding: 3px 7px;">Home & Decor</div>
                         <div class="tiktok-stats-bar" style="font-size: 10px; display: flex; justify-content: space-between; gap: 4px;">
-                            <span>👁️ 13.3K</span>
-                            <span>❤️ 182</span>
+                            <span id="views-7624536127499717908">👁️ 13.3K</span>
+                            <span id="likes-7624536127499717908">❤️ 182</span>
                         </div>
                     </div>
                     <div class="tiktok-card-body" style="padding: 12px;">
@@ -2498,6 +2503,50 @@
 
         document.addEventListener('DOMContentLoaded', animateCounters);
         animateCounters();
+
+        // Live TikTok Stats Auto-Fetcher (Option 1)
+        const tiktokVideoIds = [
+            { id: '7665250133474315540', url: 'https://www.tiktok.com/@diana.scorpi/video/7665250133474315540' },
+            { id: '7652416548442852629', url: 'https://www.tiktok.com/@diana.scorpi/video/7652416548442852629' },
+            { id: '7639679991541665045', url: 'https://www.tiktok.com/@diana.scorpi/video/7639679991541665045' },
+            { id: '7625945472674417941', url: 'https://www.tiktok.com/@diana.scorpi/video/7625945472674417941' },
+            { id: '7624536127499717908', url: 'https://www.tiktok.com/@diana.scorpi/video/7624536127499717908' }
+        ];
+
+        async function fetchLiveTikTokMetrics() {
+            tiktokVideoIds.forEach(async (v) => {
+                try {
+                    const proxyUrl = 'https://api.allorigins.win/get?url=' + encodeURIComponent(v.url);
+                    const res = await fetch(proxyUrl);
+                    if (!res.ok) return;
+                    const data = await res.json();
+                    const html = data.contents || '';
+                    
+                    const diggMatch = html.match(/"diggCount":(\d+)/);
+                    const playMatch = html.match(/"playCount":(\d+)/);
+
+                    if (playMatch && playMatch[1]) {
+                        const viewsNum = parseInt(playMatch[1], 10);
+                        const viewsFormatted = viewsNum >= 1000 ? (viewsNum / 1000).toFixed(1) + 'K' : viewsNum;
+                        const vEl = document.getElementById('views-' + v.id);
+                        if (vEl) vEl.innerText = '👁️ ' + viewsFormatted;
+                    }
+
+                    if (diggMatch && diggMatch[1]) {
+                        const likesNum = parseInt(diggMatch[1], 10);
+                        const likesFormatted = likesNum >= 1000 ? (likesNum / 1000).toFixed(1) + 'K' : likesNum;
+                        const lEl = document.getElementById('likes-' + v.id);
+                        if (lEl) lEl.innerText = '❤️ ' + likesFormatted;
+                    }
+                } catch (err) {
+                    // Graceful fallback to static pre-rendered values
+                }
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            fetchLiveTikTokMetrics();
+        });
     </script>
 </body>
 </html>
