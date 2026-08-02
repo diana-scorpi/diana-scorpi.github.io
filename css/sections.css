@@ -1,0 +1,530 @@
+/* Progress fill widths (extracted from inline styles) */
+.progress-fill-88 {
+    width: 88%;
+}
+
+.progress-fill-12 {
+    width: 12%;
+}
+
+/* SECTION 1: COVER */
+.cover-hero-title {
+    font-size: 72px;
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: -2.5px;
+    margin-bottom: 24px;
+}
+
+.cover-hero-title span {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.cover-desc {
+    font-size: 20px;
+    color: var(--text-muted);
+    margin-bottom: 40px;
+    line-height: 1.5;
+}
+
+.cover-portrait-wrapper {
+    position: relative;
+    border-radius: 32px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 35px 70px rgba(0, 0, 0, 0.7);
+}
+
+.cover-portrait-wrapper img {
+    width: 100%;
+    height: 620px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.8s ease;
+}
+
+.cover-portrait-wrapper:hover img {
+    transform: scale(1.04);
+}
+
+.portrait-badge {
+    position: absolute;
+    bottom: 24px;
+    left: 24px;
+    right: 24px;
+    background: rgba(10, 11, 15, 0.75);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Extracted from inline styles — cover section */
+.btn-print-accent {
+    border-color: var(--accent-purple);
+}
+
+.portrait-badge-name {
+    font-weight: 800;
+    font-size: 18px;
+}
+
+.portrait-badge-role {
+    font-size: 13px;
+    color: var(--accent-purple);
+    font-weight: 600;
+}
+
+.portrait-badge-views {
+    font-weight: 800;
+    font-size: 15px;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* SECTION 2: ABOUT */
+.about-bio-card {
+    border-left: 4px solid var(--accent-pink);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 36px 32px;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
+}
+
+.about-text-p {
+    font-size: 16px;
+    color: var(--text-muted);
+    margin-bottom: 16px;
+    line-height: 1.7;
+}
+
+/* Extracted from inline styles — about section */
+.about-bio-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.about-bio-icon {
+    font-size: 18px;
+}
+
+.about-bio-label {
+    font-family: 'Outfit';
+    font-size: 13px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--accent-pink);
+}
+
+.about-text-p-last {
+    margin-bottom: 0;
+}
+
+.about-features-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.feature-card-desc {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
+/* SECTION 3: AUDIENCE SNAPSHOT */
+.metric-box-center {
+    text-align: center;
+}
+
+/* SECTION 4: SOCIAL MEDIA */
+.social-brand-title-inner {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.social-icon-tiktok {
+    color: #ff2e93;
+}
+
+.social-icon-instagram {
+    color: #e1306c;
+}
+
+.social-handle {
+    color: var(--accent-purple);
+    font-weight: 700;
+}
+
+/* SECTION 5: AUDIENCE DEMOGRAPHICS */
+.demo-card-title {
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.demo-card-subtitle {
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+.fyp-donut-value {
+    font-size: 30px;
+    font-weight: 800;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.fyp-donut-label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-muted);
+    font-weight: 700;
+}
+
+.fyp-feature-title {
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.fyp-feature-desc {
+    font-size: 11px;
+    color: var(--text-muted);
+}
+
+.proof-banner-tight {
+    margin-top: 24px;
+}
+
+/* SECTION 6: ACHIEVEMENTS */
+.achievement-icon {
+    font-size: 36px;
+    margin-bottom: 12px;
+}
+
+/* SECTION 7: BRAND CASES */
+.cases-header-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.cases-title-flush {
+    margin-bottom: 0;
+}
+
+.case-live-badge {
+    font-size: 11px;
+    background: rgba(34, 197, 94, 0.15);
+    color: #4ade80;
+    border: 1px solid rgba(34, 197, 94, 0.3);
+    padding: 4px 12px;
+    border-radius: 9999px;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.case-live-dot {
+    width: 6px;
+    height: 6px;
+    background: #22c55e;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.cases-subtitle-spaced {
+    margin-top: 8px;
+    margin-bottom: 18px;
+}
+
+.hero-stats-bar-vertical {
+    font-size: 11px;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.hero-case-title {
+    font-size: 22px;
+    font-weight: 800;
+    color: #fff;
+    line-height: 1.25;
+    margin-bottom: 8px;
+}
+
+.hero-tag-wrapper {
+    margin-bottom: 12px;
+}
+
+.hero-case-tag {
+    font-size: 11px;
+    background: rgba(255, 46, 147, 0.2);
+    color: var(--accent-pink);
+    border: 1px solid rgba(255, 46, 147, 0.4);
+    padding: 4px 12px;
+    border-radius: 9999px;
+    font-weight: 700;
+    display: inline-block;
+}
+
+.hero-case-desc {
+    font-size: 13.5px;
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin-bottom: 18px;
+}
+
+.hero-status-box {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 14px;
+    padding: 12px 16px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero-status-label {
+    font-size: 10px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    font-weight: 700;
+}
+
+.hero-status-label-right {
+    font-size: 10px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    font-weight: 700;
+    text-align: right;
+}
+
+.hero-status-value {
+    font-size: 13px;
+    font-weight: 800;
+    color: #4ade80;
+}
+
+.hero-source-value {
+    font-size: 13px;
+    font-weight: 800;
+    color: var(--accent-pink);
+    text-align: right;
+}
+
+.hero-case-btn {
+    padding: 12px 24px;
+    font-size: 13px;
+    width: 100%;
+    justify-content: center;
+}
+
+.brand-item-name {
+    font-size: 15px;
+    font-weight: 800;
+    color: #fff;
+}
+
+.brand-item-category {
+    font-size: 11px;
+    color: var(--text-muted);
+    margin-top: 2px;
+}
+
+.brand-item-views {
+    font-size: 12px;
+    color: var(--accent-pink);
+    font-weight: 700;
+}
+
+/* SECTION 8: FORMATS */
+.format-icon-chip {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 14px;
+    margin-bottom: 16px;
+}
+
+.format-icon-chip-tiktok {
+    background: rgba(255, 46, 147, 0.12);
+    border: 1px solid rgba(255, 46, 147, 0.25);
+}
+
+.format-icon-chip-instagram {
+    background: rgba(225, 48, 108, 0.12);
+    border: 1px solid rgba(225, 48, 108, 0.25);
+}
+
+.format-icon-chip-stories {
+    background: rgba(193, 53, 132, 0.12);
+    border: 1px solid rgba(193, 53, 132, 0.25);
+}
+
+.format-icon-chip-combo {
+    background: rgba(255, 180, 0, 0.12);
+    border: 1px solid rgba(255, 180, 0, 0.25);
+}
+
+.format-icon-chip-ugc {
+    background: rgba(138, 43, 226, 0.12);
+    border: 1px solid rgba(138, 43, 226, 0.25);
+}
+
+.format-icon-chip-events {
+    background: rgba(0, 210, 255, 0.12);
+    border: 1px solid rgba(0, 210, 255, 0.25);
+}
+
+.format-icon-svg-tiktok {
+    color: #ff2e93;
+}
+
+.format-icon-svg-instagram {
+    color: #e1306c;
+}
+
+.format-icon-svg-stories {
+    color: #c13584;
+}
+
+.format-icon-svg-combo {
+    color: #ffb400;
+}
+
+.format-icon-svg-ugc {
+    color: #8a2be2;
+}
+
+.format-icon-svg-events {
+    color: #00d2ff;
+}
+
+.format-card-title {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.format-card-desc {
+    font-size: 14px;
+    color: var(--text-muted);
+}
+
+/* SECTION 9: PRICING */
+.pricing-cta-btn {
+    width: 100%;
+    margin-top: auto;
+}
+
+/* SECTION 10: WHY ME */
+.reason-title {
+    font-size: 18px;
+    margin-bottom: 4px;
+    color: var(--accent-pink);
+}
+
+.reason-desc {
+    font-size: 14px;
+    color: var(--text-muted);
+}
+
+/* SECTION 12: CONTACTS */
+.contacts-header-center {
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.status-pill-centered {
+    margin: 0 auto 16px auto;
+}
+
+.vip-hotline-title {
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--text-main);
+    margin-bottom: 12px;
+}
+
+.vip-hotline-desc {
+    font-size: 15px;
+    color: var(--text-muted);
+    max-width: 600px;
+    margin: 0 auto 28px auto;
+    line-height: 1.6;
+}
+
+.vip-hotline-cta {
+    font-size: 17px;
+    padding: 18px 42px;
+}
+
+.vip-social-handle {
+    color: var(--accent-pink);
+}
+
+/* SECTION 13: THANK YOU */
+.thank-you-center {
+    text-align: center;
+    padding: 80px 0;
+}
+
+.thank-you-title {
+    font-size: 64px;
+    font-weight: 800;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 20px;
+}
+
+.thank-you-subtitle {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 36px;
+}
+
+.thank-you-actions {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.thank-you-btn {
+    font-size: 16px;
+    padding: 16px 36px;
+}
+
+/* Proof disclaimer banner */
+.proof-disclaimer-banner {
+    margin-top: 40px;
+    padding: 16px 28px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    font-size: 13px;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    justify-content: center;
+}

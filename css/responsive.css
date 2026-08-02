@@ -1,0 +1,273 @@
+/* Mobile responsiveness improvements */
+@media (max-width: 1024px) {
+
+    .cover-layout,
+    .about-grid,
+    .social-cards-grid,
+    .charts-row,
+    .reasons-grid,
+    .pricing-cards-3grid {
+        grid-template-columns: 1fr;
+    }
+
+    .metrics-4grid,
+    .achievements-grid,
+    .formats-cards-3grid,
+    .terms-flex-grid,
+    .contact-cards-3grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .cover-hero-title {
+        font-size: 48px;
+    }
+
+    .cover-portrait-wrapper img {
+        height: 480px;
+    }
+
+    .section-slide {
+        padding: 40px 6%;
+    }
+}
+
+@media (max-width: 640px) {
+
+    .metrics-4grid,
+    .achievements-grid,
+    .formats-cards-3grid,
+    .terms-flex-grid,
+    .contact-cards-3grid,
+    .pricing-cards-3grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-slide {
+        padding: 40px 4%;
+    }
+
+    .section-title {
+        font-size: 32px;
+    }
+
+    .cover-hero-title {
+        font-size: 38px;
+    }
+
+    .cover-portrait-wrapper img {
+        height: 380px;
+    }
+
+    .case-item-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .case-btn-link {
+        margin-top: 8px;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .side-nav {
+        right: 8px;
+    }
+}
+
+/* Responsive Mobile & Tablet Styles */
+@media (max-width: 1024px) {
+    .tiktok-cases-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+    }
+
+    .cover-layout {
+        grid-template-columns: 1fr;
+        gap: 36px;
+        text-align: center;
+    }
+
+    .cover-hero-title {
+        font-size: 44px;
+    }
+
+    .cover-desc {
+        margin: 0 auto 24px auto;
+    }
+
+    .action-buttons {
+        justify-content: center;
+    }
+
+    .cover-portrait-wrapper img {
+        height: 420px;
+        max-width: 340px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .side-nav {
+        display: none !important;
+    }
+
+    .section-slide {
+        padding: 48px 16px;
+        min-height: auto !important;
+        height: auto !important;
+    }
+
+    .section-title {
+        font-size: 28px !important;
+        letter-spacing: -0.5px !important;
+    }
+
+    .section-subtitle {
+        font-size: 14px !important;
+        margin-bottom: 24px !important;
+    }
+
+    .cover-hero-title {
+        font-size: 34px !important;
+    }
+
+    .cover-desc {
+        font-size: 13px !important;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .action-buttons .btn {
+        width: 100%;
+        max-width: 280px;
+        justify-content: center;
+    }
+
+    .cover-portrait-wrapper img {
+        height: 340px;
+        max-width: 280px;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr !important;
+        gap: 16px !important;
+    }
+
+    .about-grid>div:nth-child(2) {
+        grid-template-columns: 1fr !important;
+    }
+
+    .metrics-4grid {
+        grid-template-columns: 1fr 1fr !important;
+        gap: 12px !important;
+    }
+
+    .social-cards-grid {
+        grid-template-columns: 1fr !important;
+        gap: 16px !important;
+    }
+
+    .demo-analytics-grid {
+        grid-template-columns: 1fr !important;
+        gap: 16px !important;
+    }
+
+    .achievements-grid {
+        grid-template-columns: 1fr !important;
+        gap: 14px !important;
+    }
+
+    .tiktok-cases-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 12px !important;
+    }
+
+    .formats-cards-3grid {
+        grid-template-columns: 1fr !important;
+        gap: 14px !important;
+    }
+
+    .pricing-cards-3grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+    }
+
+    .pricing-card-featured {
+        transform: none !important;
+    }
+
+    .reasons-grid {
+        grid-template-columns: 1fr !important;
+        gap: 12px !important;
+    }
+
+    .workflow-steps-4grid {
+        grid-template-columns: 1fr !important;
+        gap: 14px !important;
+    }
+
+    .vip-hotline-card {
+        padding: 28px 18px !important;
+    }
+
+    .vip-social-links-row {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 10px !important;
+    }
+
+    .vip-social-pill {
+        width: 100% !important;
+        max-width: 280px !important;
+        justify-content: center !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .metrics-4grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .tiktok-cases-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .metric-big-num {
+        font-size: 32px !important;
+    }
+}
+
+/* Print / Export PDF styles */
+@media print {
+
+    .side-nav,
+    .back-to-top,
+    .toast,
+    .action-buttons,
+    .proof-disclaimer-banner {
+        display: none !important;
+    }
+
+    body,
+    .section-slide {
+        background: #0c070f !important;
+        color: #fff !important;
+        min-height: auto !important;
+        height: auto !important;
+        page-break-after: always;
+    }
+
+    .section-slide {
+        padding: 40px 20px !important;
+    }
+}
