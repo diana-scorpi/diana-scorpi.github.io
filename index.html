@@ -1300,39 +1300,67 @@
             display: block;
         }
 
-        /* Brand Social Proof Pills */
-        .brand-proof-pills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-bottom: 24px;
+        /* Brand Logos Showcase Grid */
+        .brand-logos-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
         }
 
-        .brand-pill {
+        .brand-logo-card {
+            padding: 16px 20px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            border-radius: 20px;
             background: rgba(255, 255, 255, 0.04);
             border: 1px solid var(--border-color);
-            border-radius: 9999px;
-            padding: 8px 16px;
-            font-size: 13px;
-            font-weight: 700;
-            color: var(--text-main);
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            backdrop-filter: blur(12px);
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        .brand-pill:hover {
-            background: rgba(255, 46, 147, 0.15);
+        .brand-logo-card:hover {
+            background: rgba(255, 46, 147, 0.1);
             border-color: var(--border-accent);
-            color: #fff;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 18px rgba(255, 46, 147, 0.25);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(255, 46, 147, 0.2);
         }
 
-        .brand-pill-icon {
+        .brand-logo-img-wrapper {
+            width: 54px;
+            height: 54px;
+            min-width: 54px;
+            border-radius: 14px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+        }
+
+        .brand-logo-img {
+            max-width: 100%;
+            max-height: 100%;
+            display: block;
+        }
+
+        .brand-logo-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .brand-logo-title {
+            font-family: 'Outfit', sans-serif;
             font-size: 15px;
+            font-weight: 800;
+            color: var(--text-main);
+        }
+
+        .brand-logo-category {
+            font-size: 11px;
+            color: var(--text-muted);
+            font-weight: 600;
         }
 
         /* Slide 12.1 Variant A: Hero Desk */
@@ -1952,37 +1980,48 @@
             </div>
             <p class="section-subtitle" style="margin-top: 8px; margin-bottom: 20px;">Реальні рекламні кейси з живим оновленням статистики. Натисніть на інтеграцію для перегляду ролика.</p>
 
-            <!-- Social Proof: Trusted Brands -->
-            <div style="margin-bottom: 28px;">
-                <div style="font-size: 12px; font-family: 'Outfit'; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent-pink); font-weight: 800; margin-bottom: 12px;">🤝 З ними я вже успішно співпрацювала (Social Proof):</div>
-                <div class="brand-proof-pills">
-                    <div class="brand-pill">
-                        <span class="brand-pill-icon">🥤</span>
-                        <span>ТернОпілля (Лимонади)</span>
+            <!-- Social Proof: Trusted Real Brand Logos -->
+            <div style="margin-bottom: 32px;">
+                <div style="font-size: 12px; font-family: 'Outfit'; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent-pink); font-weight: 800; margin-bottom: 14px;">🤝 Бренди та компанії, з якими я вже співпрацювала (Social Proof):</div>
+                <div class="brand-logos-grid">
+                    <div class="glass-box brand-logo-card">
+                        <div class="brand-logo-img-wrapper">
+                            <img src="assets/images/brand-ternopillya.png" alt="ТернОпілля Лимонади" class="brand-logo-img" style="object-fit: contain;">
+                        </div>
+                        <div class="brand-logo-info">
+                            <span class="brand-logo-title">ТернОпілля</span>
+                            <span class="brand-logo-category">Лимонади & Напої</span>
+                        </div>
                     </div>
-                    <div class="brand-pill">
-                        <span class="brand-pill-icon">🎪</span>
-                        <span>Food Fest (Фестивалі)</span>
+
+                    <div class="glass-box brand-logo-card">
+                        <div class="brand-logo-img-wrapper">
+                            <img src="assets/images/brand-foodfest.png" alt="Food Fest" class="brand-logo-img" style="object-fit: contain;">
+                        </div>
+                        <div class="brand-logo-info">
+                            <span class="brand-logo-title">Food Fest</span>
+                            <span class="brand-logo-category">Гастро Фестиваль</span>
+                        </div>
                     </div>
-                    <div class="brand-pill">
-                        <span class="brand-pill-icon">✨</span>
-                        <span>Parfum City (Парфумерія)</span>
+
+                    <div class="glass-box brand-logo-card">
+                        <div class="brand-logo-img-wrapper" style="background: rgba(255,255,255,0.95); padding: 6px; border-radius: 12px;">
+                            <img src="assets/images/brand-parfumcity.png" alt="Parfum City" class="brand-logo-img" style="object-fit: contain;">
+                        </div>
+                        <div class="brand-logo-info">
+                            <span class="brand-logo-title">Parfum City</span>
+                            <span class="brand-logo-category">Парфумерія & Beauty</span>
+                        </div>
                     </div>
-                    <div class="brand-pill">
-                        <span class="brand-pill-icon">🏡</span>
-                        <span>Luxor Home (Декор)</span>
-                    </div>
-                    <div class="brand-pill">
-                        <span class="brand-pill-icon">💄</span>
-                        <span>Beauty & Догляд</span>
-                    </div>
-                    <div class="brand-pill">
-                        <span class="brand-pill-icon">👗</span>
-                        <span>Мода & Одяг</span>
-                    </div>
-                    <div class="brand-pill">
-                        <span class="brand-pill-icon">☕</span>
-                        <span>Кав'ярні & Заклади</span>
+
+                    <div class="glass-box brand-logo-card">
+                        <div class="brand-logo-img-wrapper">
+                            <img src="assets/images/brand-luxord.png" alt="Luxor Home Care" class="brand-logo-img" style="object-fit: cover; border-radius: 12px;">
+                        </div>
+                        <div class="brand-logo-info">
+                            <span class="brand-logo-title">Luxord Home</span>
+                            <span class="brand-logo-category">Home Care & Декор</span>
+                        </div>
                     </div>
                 </div>
             </div>
