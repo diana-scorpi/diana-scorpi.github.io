@@ -1,4 +1,4 @@
-/* analytics.js — Google Analytics (gtag.js) bootstrap.
+/* analytics.js - Google Analytics (gtag.js) bootstrap.
    The external async script tag for gtag/js?id=G-BXNRM9J4Q9 remains in <head>. */
 (function () {
     'use strict';

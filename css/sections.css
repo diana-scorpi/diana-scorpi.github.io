@@ -65,7 +65,7 @@
     justify-content: space-between;
 }
 
-/* Extracted from inline styles — cover section */
+/* Extracted from inline styles - cover section */
 .btn-print-accent {
     border-color: var(--accent-purple);
 }
@@ -106,7 +106,7 @@
     line-height: 1.7;
 }
 
-/* Extracted from inline styles — about section */
+/* Extracted from inline styles - about section */
 .about-bio-header {
     display: flex;
     align-items: center;

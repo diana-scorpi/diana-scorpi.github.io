@@ -1,4 +1,4 @@
-/* navigation.js — Scroll spy, side-dot nav, wheel/keyboard slide transitions, back-to-top */
+/* navigation.js - Scroll spy, side-dot nav, wheel/keyboard slide transitions, back-to-top */
 (function () {
     'use strict';
 

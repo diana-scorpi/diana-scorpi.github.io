@@ -1,4 +1,4 @@
-/* cases.js — Section 7 interactive hero case switcher + live TikTok metrics fetcher */
+/* cases.js - Section 7 interactive hero case switcher + live TikTok metrics fetcher */
 (function () {
     'use strict';
 

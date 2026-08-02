@@ -1,4 +1,4 @@
-/* app.js — Bootstrap / init on DOMContentLoaded */
+/* app.js - Bootstrap / init on DOMContentLoaded */
 (function () {
     'use strict';
 

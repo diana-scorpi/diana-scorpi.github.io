@@ -1,4 +1,4 @@
-/* counters.js — Animated number counters for .metric-big-num */
+/* counters.js - Animated number counters for .metric-big-num */
 (function () {
     'use strict';
 
@@ -17,7 +17,7 @@
                     var targetText = entry.target.getAttribute('data-count') || entry.target.innerText.trim();
                     entry.target.setAttribute('data-count', targetText);
 
-                    if (/\d+[\s–-]+\d+/.test(targetText) || !/\d/.test(targetText)) {
+                    if (/\d+[\s--]+\d+/.test(targetText) || !/\d/.test(targetText)) {
                         return;
                     }
 

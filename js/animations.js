@@ -1,4 +1,4 @@
-/* animations.js — IntersectionObserver scroll-reveal */
+/* animations.js - IntersectionObserver scroll-reveal */
 (function () {
     'use strict';
 

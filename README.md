@@ -1,4 +1,4 @@
-# 👑 Diana Scorpi — Premium Media Kit 2026
+# 👑 Diana Scorpi - Premium Media Kit 2026
 
 Естетичний та сучасний інтерактивний Media Kit для TikTok & Instagram кріейторки **Diana Scorpi**.
 
@@ -31,7 +31,7 @@ git push -u origin main
    - Source: `Deploy from a branch`
    - Branch: виберіть `main` і папку `/ (root)`
 4. Натисніть **Save**.
-5. Зачекайте 1-2 хвилини — ваша лінка з'явиться зверху (наприклад `https://your-username.github.io/media-kit/`)!
+5. Зачекайте 1-2 хвилини - ваша лінка з'явиться зверху (наприклад `https://your-username.github.io/media-kit/`)!
 
 ---
 

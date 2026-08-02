@@ -1,4 +1,4 @@
-/* charts.js — Chart.js doughnut for canvas#reachChartFull */
+/* charts.js - Chart.js doughnut for canvas#reachChartFull */
 (function () {
     'use strict';
 

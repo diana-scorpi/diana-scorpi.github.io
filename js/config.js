@@ -1,4 +1,4 @@
-/* config.js — Shared data & constants */
+/* config.js - Shared data & constants */
 (function () {
     'use strict';
 
@@ -45,7 +45,7 @@
                 link: "https://www.tiktok.com/@diana.scorpi/video/7639679991541665045"
             },
             {
-                title: "Parfum City — Огляд Ароматів",
+                title: "Parfum City - Огляд Ароматів",
                 category: "Perfumery",
                 views: "25.2K Переглядів",
                 likes: "476 Лайків",
@@ -57,7 +57,7 @@
                 link: "https://www.tiktok.com/@diana.scorpi/video/7625945472674417941"
             },
             {
-                title: "Luxord Home — Затишний Огляд",
+                title: "Luxord Home - Затишний Огляд",
                 category: "Home Care",
                 views: "13.3K Переглядів",
                 likes: "182 Лайків",

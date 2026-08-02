@@ -1,4 +1,4 @@
-/* utils.js — Shared helpers: DOM query cache & number formatting */
+/* utils.js - Shared helpers: DOM query cache & number formatting */
 (function () {
     'use strict';
 
