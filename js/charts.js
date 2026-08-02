@@ -4,10 +4,11 @@
 
     window.MediaKit = window.MediaKit || {};
 
-    function initCharts() {
-        var canvas = document.getElementById('reachChartFull');
-        if (!canvas || typeof Chart === 'undefined') return;
-
+    /**
+     * Create the FYP reach doughnut chart on #reachChartFull.
+     * No-op when the canvas is missing or Chart.js failed to load.
+     */
+    function createReachChart(canvas) {
         var ctxReachFull = canvas.getContext('2d');
         new Chart(ctxReachFull, {
             type: 'doughnut',
@@ -29,6 +30,34 @@
                 }
             }
         });
+    }
+
+    /**
+     * Lazily initialise the doughnut: the Chart.js instance is only created
+     * when the canvas approaches the viewport (IntersectionObserver), which
+     * keeps it off the critical rendering path. Falls back to immediate
+     * creation when IntersectionObserver is unavailable. Requires Chart.js
+     * to be already loaded (deferred CDN script runs before this file).
+     */
+    function initCharts() {
+        var canvas = document.getElementById('reachChartFull');
+        if (!canvas || typeof Chart === 'undefined') return;
+
+        if (!('IntersectionObserver' in window)) {
+            createReachChart(canvas);
+            return;
+        }
+
+        var chartObserver = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    chartObserver.disconnect();
+                    createReachChart(canvas);
+                }
+            });
+        }, { rootMargin: '200px' });
+
+        chartObserver.observe(canvas);
     }
 
     window.MediaKit.charts = {

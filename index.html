@@ -13,6 +13,9 @@
         content="Diana Scorpi, Media Kit, TikTok Creator, Instagram Influencer, реклама, блогер Україна, блогер Тернопіль Київ">
     <meta name="author" content="Diana Scorpi">
     <meta name="theme-color" content="#08090c">
+    <meta name="robots" content="index, follow">
+    <meta name="color-scheme" content="dark">
+    <link rel="canonical" href="https://diana-scorpi.github.io/">
 
     <!-- Open Graph / Social Media Preview -->
     <meta property="og:type" content="website">
@@ -42,7 +45,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
         rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="css/variables.css">
@@ -68,787 +71,817 @@
 
 <body>
 
+    <a class="skip-link visually-hidden" href="#cover">Перейти до вмісту</a>
+
     <!-- Side Dot Navigation Bar -->
-    <nav class="side-nav" id="sideNav" role="navigation" aria-label="Навігація по розділах">
-        <div class="side-nav-dot active" role="button" tabindex="0" aria-label="1. Обкладинка" aria-current="true"><span
-                class="side-nav-tooltip">1. Обкладинка</span></div>
-        <div class="side-nav-dot" role="button" tabindex="0" aria-label="2. Про мене"><span class="side-nav-tooltip">2.
-                Про мене</span></div>
-        <div class="side-nav-dot" role="button" tabindex="0" aria-label="3. Огляд"><span class="side-nav-tooltip">3.
-                Огляд</span></div>
-        <div class="side-nav-dot" role="button" tabindex="0" aria-label="4. Соцмережі"><span class="side-nav-tooltip">4.
-                Соцмережі</span></div>
-        <div class="side-nav-dot" role="button" tabindex="0" aria-label="5. Демографія"><span
-                class="side-nav-tooltip">5. Демографія</span></div>
-        <div class="side-nav-dot" role="button" tabindex="0" aria-label="6. Рекорди"><span class="side-nav-tooltip">6.
-                Рекорди</span></div>
-        <div class="side-nav-dot" role="button" tabindex="0" aria-label="7. Кейси"><span class="side-nav-tooltip">7.
-                Кейси</span></div>
-        <div class="side-nav-dot" role="button" tabindex="0" aria-label="8. Формати"><span class="side-nav-tooltip">8.
-                Формати</span></div>
-        <div class="side-nav-dot" role="button" tabindex="0" aria-label="9. Прайс & Пакети"><span
-                class="side-nav-tooltip">9. Прайс & Пакети</span></div>
-        <div class="side-nav-dot" role="button" tabindex="0" aria-label="10. Переваги & Цінність"><span
-                class="side-nav-tooltip">10. Переваги & Цінність</span></div>
-        <div class="side-nav-dot" role="button" tabindex="0" aria-label="11. Як ми працюємо"><span
-                class="side-nav-tooltip">11. Як ми працюємо</span></div>
-        <div class="side-nav-dot" role="button" tabindex="0" aria-label="12. Контакти"><span
-                class="side-nav-tooltip">12. Контакти</span></div>
-        <div class="side-nav-dot" role="button" tabindex="0" aria-label="13. Фінал"><span class="side-nav-tooltip">13.
-                Фінал</span></div>
+    <nav class="side-nav" id="sideNav" aria-label="Навігація по розділах">
+        <button type="button" class="side-nav-dot active" aria-label="1. Обкладинка" aria-current="true"><span
+                class="side-nav-tooltip" aria-hidden="true">1. Обкладинка</span></button>
+        <button type="button" class="side-nav-dot" aria-label="2. Про мене"><span class="side-nav-tooltip"
+                aria-hidden="true">2. Про мене</span></button>
+        <button type="button" class="side-nav-dot" aria-label="3. Огляд"><span class="side-nav-tooltip"
+                aria-hidden="true">3. Огляд</span></button>
+        <button type="button" class="side-nav-dot" aria-label="4. Соцмережі"><span class="side-nav-tooltip"
+                aria-hidden="true">4. Соцмережі</span></button>
+        <button type="button" class="side-nav-dot" aria-label="5. Демографія"><span class="side-nav-tooltip"
+                aria-hidden="true">5. Демографія</span></button>
+        <button type="button" class="side-nav-dot" aria-label="6. Рекорди"><span class="side-nav-tooltip"
+                aria-hidden="true">6. Рекорди</span></button>
+        <button type="button" class="side-nav-dot" aria-label="7. Кейси"><span class="side-nav-tooltip"
+                aria-hidden="true">7. Кейси</span></button>
+        <button type="button" class="side-nav-dot" aria-label="8. Формати"><span class="side-nav-tooltip"
+                aria-hidden="true">8. Формати</span></button>
+        <button type="button" class="side-nav-dot" aria-label="9. Прайс & Пакети"><span class="side-nav-tooltip"
+                aria-hidden="true">9. Прайс & Пакети</span></button>
+        <button type="button" class="side-nav-dot" aria-label="10. Переваги & Цінність"><span class="side-nav-tooltip"
+                aria-hidden="true">10. Переваги & Цінність</span></button>
+        <button type="button" class="side-nav-dot" aria-label="11. Як ми працюємо"><span class="side-nav-tooltip"
+                aria-hidden="true">11. Як ми працюємо</span></button>
+        <button type="button" class="side-nav-dot" aria-label="12. Контакти"><span class="side-nav-tooltip"
+                aria-hidden="true">12. Контакти</span></button>
+        <button type="button" class="side-nav-dot" aria-label="13. Фінал"><span class="side-nav-tooltip"
+                aria-hidden="true">13. Фінал</span></button>
     </nav>
 
-    <!-- SECTION 1: COVER -->
-    <section id="cover" class="section-slide">
-        <div class="ambient-light pos-top-right"></div>
-        <div class="container cover-layout">
-            <div>
-                <span class="tag-pill">Media Kit 2026 • Official</span>
-                <h1 class="cover-hero-title">Diana <span>Scorpi</span></h1>
-                <p class="cover-desc">Привіт! Я Діана - блогерка з Тернополя. Знімаю живий та естетичний контент про студентське життя, навчання, стиль та відпочинок. Створюю щирі рекламні інтеграції, які легко виходять у рекомендації TikTok та приводять брендам реальних покупців.</p>
+    <main>
+        <!-- SECTION 1: COVER -->
+        <section id="cover" class="section-slide">
+            <div class="ambient-light pos-top-right" aria-hidden="true"></div>
+            <div class="container cover-layout">
+                <div>
+                    <span class="tag-pill">Media Kit 2026 • Official</span>
+                    <h1 class="cover-hero-title">Diana <span>Scorpi</span></h1>
+                    <p class="cover-desc">Привіт! Я Діана - блогерка з Тернополя. Знімаю живий та естетичний контент про
+                        студентське життя, навчання, стиль та відпочинок. Створюю щирі рекламні інтеграції, які легко
+                        виходять у рекомендації TikTok та приводять брендам реальних покупців.</p>
 
-                <div class="action-buttons">
-                    <a href="https://www.tiktok.com/@diana.scorpi" target="_blank" rel="noopener" class="btn btn-glow">
-                        TikTok Профіль ↗
-                    </a>
-                    <a href="https://www.instagram.com/diana.scorpi" target="_blank" rel="noopener"
-                        class="btn btn-outline">
-                        Instagram ↗
-                    </a>
-                    <button type="button" data-action="print" class="btn btn-outline btn-print-accent">
-                        📥 Завантажити PDF
-                    </button>
+                    <div class="action-buttons">
+                        <a href="https://www.tiktok.com/@diana.scorpi" target="_blank" rel="noopener"
+                            class="btn btn-glow">
+                            TikTok Профіль ↗
+                        </a>
+                        <a href="https://www.instagram.com/diana.scorpi" target="_blank" rel="noopener"
+                            class="btn btn-outline">
+                            Instagram ↗
+                        </a>
+                        <button type="button" data-action="print" class="btn btn-outline btn-print-accent">
+                            📥 Завантажити PDF
+                        </button>
+                    </div>
+                </div>
+
+                <div class="cover-portrait-wrapper">
+                    <img src="assets/images/diana-cover.jpg" alt="Diana Scorpi Cover Photo" width="1024" height="1024"
+                        fetchpriority="high" decoding="async">
+                    <div class="portrait-badge">
+                        <div>
+                            <div class="portrait-badge-name">Diana Scorpi</div>
+                            <div class="portrait-badge-role">TikTok & Instagram Creator</div>
+                        </div>
+                        <div class="portrait-badge-views">
+                            1.2M+ Views/mo
+                        </div>
+                    </div>
                 </div>
             </div>
+        </section>
 
-            <div class="cover-portrait-wrapper">
-                <img src="assets/images/diana-cover.jpg" alt="Diana Scorpi Cover Photo">
-                <div class="portrait-badge">
+        <!-- SECTION 2: ABOUT -->
+        <section id="about" class="section-slide">
+            <div class="container">
+                <span class="tag-pill">2. About Diana</span>
+                <h2 class="section-title">Хто така Diana Scorpi</h2>
+                <p class="section-subtitle">Живий контент, стиль та щирі рекомендації.</p>
+
+                <div class="about-grid">
+                    <div class="glass-box about-bio-card">
+                        <div class="about-bio-header">
+                            <span class="about-bio-icon">✨</span>
+                            <span class="about-bio-label">Кріейторка & Блогерка</span>
+                        </div>
+                        <p class="about-text-p">
+                            Я Діана - блогерка та кріейторка з Тернополя. Мій контент - це щирі студентські будні,
+                            навчання, відпочинок, мода та активний lifestyle.
+                        </p>
+                        <p class="about-text-p about-text-p-last">
+                            Для мене важливо, щоб кожна співпраця виглядала як дружня порада, а не реклама - саме тому
+                            глядачі довіряють моїм рекомендаціям, а відео регулярно потрапляють у рекомендації (FYP).
+                        </p>
+                    </div>
+
+                    <div class="about-features-grid">
+                        <div class="glass-box feature-card">
+                            <h4>✦ Природний формат</h4>
+                            <p class="feature-card-desc">Продукт гармонійно вплітається у сюжет відео.</p>
+                        </div>
+                        <div class="glass-box feature-card">
+                            <h4>⚡ Нові глядачі</h4>
+                            <p class="feature-card-desc">93.6% переглядів припадає на нову аудиторію.</p>
+                        </div>
+                        <div class="glass-box feature-card">
+                            <h4>◆ Якісний візуал</h4>
+                            <p class="feature-card-desc">Гарне світло, чіткий звук та динамічний монтаж.</p>
+                        </div>
+                        <div class="glass-box feature-card">
+                            <h4>◈ Активна спільнота</h4>
+                            <p class="feature-card-desc">Глядачі активно зберігають відео та діляться з друзями.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: AUDIENCE SNAPSHOT -->
+        <section id="snapshot" class="section-slide">
+            <div class="ambient-light pos-bottom-left" aria-hidden="true"></div>
+            <div class="container">
+                <span class="tag-pill">3. Audience Snapshot</span>
+                <h2 class="section-title">Головні цифри акаунту</h2>
+                <p class="section-subtitle">Ключові метрики за останні 30 днів активності.</p>
+
+                <div class="metrics-4grid">
+                    <div class="glass-box metric-box-center">
+                        <div class="metric-big-num">88%</div>
+                        <div class="metric-title">Жіноча аудиторія</div>
+                        <div class="metric-subtext">Активні молоді дівчата та жінки</div>
+                    </div>
+
+                    <div class="glass-box metric-box-center">
+                        <div class="metric-big-num metric-age-pulse">
+                            <span class="age-num">18</span><span class="age-dash">-</span><span
+                                class="age-num">24</span>
+                        </div>
+                        <div class="metric-title">Ядро аудиторії</div>
+                        <div class="metric-subtext">Основний віковий сегмент ЦА</div>
+                    </div>
+
+                    <div class="glass-box metric-box-center">
+                        <div class="metric-big-num metric-cities-badge">
+                            <svg class="animated-pin-svg" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22C12 22 19 14.25 19 9C19 5.13 15.87 2 12 2ZM12 11.5C10.62 11.5 9.5 10.38 9.5 9C9.5 7.62 10.62 6.5 12 6.5C13.38 6.5 14.5 7.62 14.5 9C14.5 10.38 13.38 11.5 12 11.5Z"
+                                    fill="url(#pinGradient)" />
+                                <defs>
+                                    <linearGradient id="pinGradient" x1="5" y1="2" x2="19" y2="22"
+                                        gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#ff2e93" />
+                                        <stop offset="1" stop-color="#ff80bf" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                            <span class="city-name">Київ</span>
+                            <span class="city-dot">•</span>
+                            <span class="city-name">Львів</span>
+                        </div>
+                        <div class="metric-title">ТОП Міста</div>
+                        <div class="metric-subtext">А також Тернопіль та великі міста України</div>
+                    </div>
+
+                    <div class="glass-box metric-box-center">
+                        <div class="metric-big-num">2.4M+</div>
+                        <div class="metric-title">Загальні перегляди</div>
+                        <div class="metric-subtext">Сумарне охоплення відео</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: SOCIAL MEDIA STATS -->
+        <section id="social" class="section-slide">
+            <div class="container">
+                <span class="tag-pill">4. Social Media Channels</span>
+                <h2 class="section-title">Статистика соцмереж за останні 30 днів</h2>
+                <p class="section-subtitle">Деталізовані показники по кожній із платформ.</p>
+
+                <div class="social-cards-grid">
+                    <!-- TikTok Card -->
+                    <div class="glass-box">
+                        <div class="social-card-head">
+                            <div class="social-brand-title social-brand-title-inner">
+                                <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"
+                                    xmlns="http://www.w3.org/2000/svg" class="social-icon-tiktok">
+                                    <path
+                                        d="M19.589 6.686a4.793 4.793 0 01-3.77-4.245V2h-3.445v13.672a2.896 2.896 0 01-5.201 1.743 2.895 2.895 0 013.313-4.516v-3.5a6.384 6.384 0 00-1.026-.083 6.395 6.395 0 106.395 6.395V9.43a8.214 8.214 0 004.734 1.488V7.472a4.79 4.79 0 01-1.000-.786z" />
+                                </svg>
+                                TikTok Analytics
+                            </div>
+                            <span class="social-handle">@diana.scorpi</span>
+                        </div>
+                        <div class="stats-list">
+                            <div class="stat-row">
+                                <span>Перегляди публікацій (30 днів):</span>
+                                <span>1,250,854</span>
+                            </div>
+                            <div class="stat-row">
+                                <span>Приріст нових читачів (30 днів):</span>
+                                <span>+285</span>
+                            </div>
+                            <div class="stat-row">
+                                <span>Унікальні охоплені акаунти:</span>
+                                <span>222,720</span>
+                            </div>
+                            <div class="stat-row">
+                                <span>Частка не-підписників (FYP Recommendations):</span>
+                                <span>93.6%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Instagram Card -->
+                    <div class="glass-box">
+                        <div class="social-card-head">
+                            <div class="social-brand-title social-brand-title-inner">
+                                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                    xmlns="http://www.w3.org/2000/svg" class="social-icon-instagram">
+                                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                                </svg>
+                                Instagram Analytics
+                            </div>
+                            <span class="social-handle">@diana.scorpi</span>
+                        </div>
+                        <div class="stats-list">
+                            <div class="stat-row">
+                                <span>Загальні перегляди (30 днів):</span>
+                                <span>1,200,000+</span>
+                            </div>
+                            <div class="stat-row">
+                                <span>Уподобайки (Likes):</span>
+                                <span>36,100</span>
+                            </div>
+                            <div class="stat-row">
+                                <span>Поширення (Shares):</span>
+                                <span>18,500</span>
+                            </div>
+                            <div class="stat-row">
+                                <span>Перегляди профілю:</span>
+                                <span>47,300</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5: AUDIENCE DEMOGRAPHICS -->
+        <section id="demographics" class="section-slide">
+            <div class="container">
+                <span class="tag-pill">5. Audience Demographics</span>
+                <h2 class="section-title">Демографія & Джерела охоплення</h2>
+                <p class="section-subtitle">Розподіл аудиторії за статтю, віком та джерелами вірусного трафіку.</p>
+
+                <div class="demo-analytics-grid">
+                    <!-- Left Card: Gender & Age Split -->
+                    <div class="glass-box demo-card">
+                        <div class="demo-card-header">
+                            <div>
+                                <h3 class="demo-card-title">👩 Стать & Вік аудиторії</h3>
+                                <p class="demo-card-subtitle">Переважно жіноча платоспроможна молодь</p>
+                            </div>
+                            <span class="demo-highlight-badge">88% Жінки</span>
+                        </div>
+
+                        <div class="gender-progress-group">
+                            <div class="progress-bar-row">
+                                <div class="progress-bar-label">
+                                    <span>👩 Жінки (18-24 роки)</span>
+                                    <span>88%</span>
+                                </div>
+                                <div class="progress-track">
+                                    <div class="progress-fill progress-female progress-fill-88"></div>
+                                </div>
+                            </div>
+
+                            <div class="progress-bar-row">
+                                <div class="progress-bar-label">
+                                    <span>👨 Чоловіки</span>
+                                    <span>12%</span>
+                                </div>
+                                <div class="progress-track">
+                                    <div class="progress-fill progress-male progress-fill-12"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="demo-mini-stats">
+                            <div class="mini-stat-item">
+                                <div class="mini-stat-num">88.4%</div>
+                                <div class="mini-stat-label">Жіноча ЦА</div>
+                            </div>
+                            <div class="mini-stat-item">
+                                <div class="mini-stat-num">18-24</div>
+                                <div class="mini-stat-label">Основний вік</div>
+                            </div>
+                            <div class="mini-stat-item">
+                                <div class="mini-stat-num">98.2%</div>
+                                <div class="mini-stat-label">Україна</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Card: FYP Recommendation Boost -->
+                    <div class="glass-box demo-card">
+                        <div class="demo-card-header">
+                            <div>
+                                <h3 class="demo-card-title">🚀 Джерела охоплення (FYP)</h3>
+                                <p class="demo-card-subtitle">Понад 93% переглядів - нові потенційні клієнти</p>
+                            </div>
+                            <span class="demo-highlight-badge fyp-badge">93.6% FYP</span>
+                        </div>
+
+                        <div class="fyp-chart-visual">
+                            <div class="fyp-donut-center">
+                                <div class="fyp-donut-value">93.6%</div>
+                                <div class="fyp-donut-label">FYP Top</div>
+                            </div>
+                            <canvas id="reachChartFull"></canvas>
+                        </div>
+
+                        <div class="fyp-features-list">
+                            <div class="fyp-feature-item">
+                                <span class="fyp-icon">🔥</span>
+                                <div>
+                                    <div class="fyp-feature-title">Органічні рекомендації TikTok</div>
+                                    <div class="fyp-feature-desc">93.6% глядачів дізнаються про бренд без платного
+                                        таргету
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="proof-disclaimer-banner proof-banner-tight">
+                    🛡️ Вся статистика за останні 30 днів підтверджена офіційними скріншотами з аналітики акаунтів.
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 6: ACHIEVEMENTS -->
+        <section id="achievements" class="section-slide">
+            <div class="container">
+                <span class="tag-pill">6. Record Achievements</span>
+                <h2 class="section-title">Рекордні досягнення</h2>
+                <p class="section-subtitle">Показники пікової вірусності та активності за останні 30 днів.</p>
+
+                <div class="achievements-grid">
+                    <div class="glass-box">
+                        <div class="achievement-icon">🏆</div>
+                        <div class="metric-big-num">380.5K</div>
+                        <div class="metric-title">Найбільший ролик за 30 днів</div>
+                        <div class="metric-subtext">Органічне вірусне охоплення TikTok</div>
+                    </div>
+
+                    <div class="glass-box">
+                        <div class="achievement-icon">📈</div>
+                        <div class="metric-big-num">1.25M+</div>
+                        <div class="metric-title">Найкращий місяць переглядів</div>
+                        <div class="metric-subtext">Стабільна динаміка зростання</div>
+                    </div>
+
+                    <div class="glass-box">
+                        <div class="achievement-icon">🔥</div>
+                        <div class="metric-big-num">18.5K</div>
+                        <div class="metric-title">Вірусні поширення</div>
+                        <div class="metric-subtext">Глядачі активно діляться роликами</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 7: BRAND CASES / INTEGRATIONS (OPTION 7.1) -->
+        <section id="cases" class="section-slide">
+            <div class="container">
+                <span class="tag-pill">7. Portfolio</span>
+                <div class="cases-header-row">
+                    <h2 class="section-title cases-title-flush">Приклади інтеграцій</h2>
+                    <span class="case-live-badge">
+                        <span class="case-live-dot"></span> Live TikTok Sync
+                    </span>
+                </div>
+                <p class="section-subtitle cases-subtitle-spaced">Натискайте на бренд праворуч для перегляду ролика у
+                    форматі TikTok та точної статистики.</p>
+
+                <div class="v1-split-grid">
+                    <!-- Left: Hero Player Card with Native 9:16 Vertical Video Frame -->
+                    <div class="v1-hero-player">
+                        <div class="v1-hero-thumb-vertical">
+                            <img id="v1-hero-cover" src="assets/images/video1-cover.jpg" alt="Featured Case Cover"
+                                class="v1-hero-img" width="1080" height="1920" loading="lazy" decoding="async">
+                            <a id="v1-hero-play-link"
+                                href="https://www.tiktok.com/@diana.scorpi/video/7665250133474315540" target="_blank"
+                                rel="noopener" class="video-play-icon">▶</a>
+                            <div class="tiktok-overlay-gradient"></div>
+                            <div class="tiktok-badge-category" id="v1-hero-category">Beverage</div>
+                            <div class="tiktok-stats-bar hero-stats-bar-vertical">
+                                <span id="v1-hero-views">25.3K Переглядів</span>
+                                <span id="v1-hero-likes">657 Лайків</span>
+                            </div>
+                        </div>
+
+                        <div class="v1-hero-content">
+                            <div>
+                                <h3 id="v1-hero-title" class="hero-case-title">Лимонади «ТернОпілля»</h3>
+                                <div class="hero-tag-wrapper">
+                                    <span id="v1-hero-tag" class="hero-case-tag">+25.3K FYP Reach</span>
+                                </div>
+                                <p id="v1-hero-desc" class="hero-case-desc">Нативна літня інтеграція лимонадів
+                                    «ТернОпілля»
+                                    від компанії Опілля. Органічний сценарій пікніка з адаптацією під тренди TikTok.</p>
+                            </div>
+
+                            <div>
+                                <div class="hero-status-box">
+                                    <div>
+                                        <div class="hero-status-label">Статус кейсу</div>
+                                        <div id="v1-hero-status" class="hero-status-value">Опубліковано</div>
+                                    </div>
+                                    <div>
+                                        <div class="hero-status-label-right">Джерело ЦА</div>
+                                        <div id="v1-hero-source" class="hero-source-value">Рекомендації (FYP)</div>
+                                    </div>
+                                </div>
+
+                                <a id="v1-hero-btn"
+                                    href="https://www.tiktok.com/@diana.scorpi/video/7665250133474315540"
+                                    target="_blank" rel="noopener" class="btn btn-glow hero-case-btn">
+                                    ▶ Переглянути ролик у TikTok ↗
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Interactive Brand Selection Menu -->
+                    <div class="v1-brand-list">
+                        <div class="v1-brand-item active">
+                            <div>
+                                <div class="brand-item-name">ТернОпілля</div>
+                                <div class="brand-item-category">Лимонади & Напої</div>
+                            </div>
+                            <span class="brand-item-views" id="v1-side-views-0">25.3K</span>
+                        </div>
+
+                        <div class="v1-brand-item">
+                            <div>
+                                <div class="brand-item-name">Food Fest</div>
+                                <div class="brand-item-category">Гастро Фестиваль</div>
+                            </div>
+                            <span class="brand-item-views" id="v1-side-views-1">20.3K</span>
+                        </div>
+
+                        <div class="v1-brand-item">
+                            <div>
+                                <div class="brand-item-name">Догляд Волосся</div>
+                                <div class="brand-item-category">Beauty & Care</div>
+                            </div>
+                            <span class="brand-item-views" id="v1-side-views-2">13.9K</span>
+                        </div>
+
+                        <div class="v1-brand-item">
+                            <div>
+                                <div class="brand-item-name">Parfum City</div>
+                                <div class="brand-item-category">Парфумерія & Beauty</div>
+                            </div>
+                            <span class="brand-item-views" id="v1-side-views-3">25.2K</span>
+                        </div>
+
+                        <div class="v1-brand-item">
+                            <div>
+                                <div class="brand-item-name">Luxord Home</div>
+                                <div class="brand-item-category">Home Care & Декор</div>
+                            </div>
+                            <span class="brand-item-views" id="v1-side-views-4">13.3K</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 8: FORMATS -->
+        <section id="formats" class="section-slide">
+            <div class="container">
+                <span class="tag-pill">8. Formats & Services</span>
+                <h2 class="section-title">Формати співпраці</h2>
+                <p class="section-subtitle">Варіанти рекламного контенту під задачі вашого бренду.</p>
+
+                <div class="formats-cards-3grid">
+                    <div class="glass-box">
+                        <div class="format-icon format-icon-chip format-icon-chip-tiktok">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
+                                xmlns="http://www.w3.org/2000/svg" class="format-icon-svg-tiktok">
+                                <path
+                                    d="M19.589 6.686a4.793 4.793 0 01-3.77-4.245V2h-3.445v13.672a2.896 2.896 0 01-5.201 1.743 2.895 2.895 0 013.313-4.516v-3.5a6.384 6.384 0 00-1.026-.083 6.395 6.395 0 106.395 6.395V9.43a8.214 8.214 0 004.734 1.488V7.472a4.79 4.79 0 01-1.000-.786z" />
+                            </svg>
+                        </div>
+                        <h3 class="format-card-title">TikTok Відео</h3>
+                        <p class="format-card-desc">Нативний ролик із гармонійним оглядом продукту у влозі чи
+                            розпаковці.</p>
+                    </div>
+
+                    <div class="glass-box">
+                        <div class="format-icon format-icon-chip format-icon-chip-instagram">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                xmlns="http://www.w3.org/2000/svg" class="format-icon-svg-instagram">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </div>
+                        <h3 class="format-card-title">Instagram Reels</h3>
+                        <p class="format-card-desc">Естетичний ролик у стрічку з акцентом на візуал та детальну відмітку
+                            бренду.</p>
+                    </div>
+
+                    <div class="glass-box">
+                        <div class="format-icon format-icon-chip format-icon-chip-stories">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                xmlns="http://www.w3.org/2000/svg" class="format-icon-svg-stories">
+                                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                                <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                            </svg>
+                        </div>
+                        <h3 class="format-card-title">Instagram Stories</h3>
+                        <p class="format-card-desc">Серія з 3-5 живих сторіз із розпаковкою, промокодом та прямим
+                            посиланням.</p>
+                    </div>
+
+                    <div class="glass-box">
+                        <div class="format-icon format-icon-chip format-icon-chip-combo">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                xmlns="http://www.w3.org/2000/svg" class="format-icon-svg-combo">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                </polygon>
+                            </svg>
+                        </div>
+                        <h3 class="format-card-title">Комплексна реклама</h3>
+                        <p class="format-card-desc">Публікація TikTok + Reels + Stories для охоплення всієї аудиторії.
+                        </p>
+                    </div>
+
+                    <div class="glass-box">
+                        <div class="format-icon format-icon-chip format-icon-chip-ugc">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                xmlns="http://www.w3.org/2000/svg" class="format-icon-svg-ugc">
+                                <path d="M23 7l-7 5 7 5V7z"></path>
+                                <rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect>
+                            </svg>
+                        </div>
+                        <h3 class="format-card-title">UGC Контент</h3>
+                        <p class="format-card-desc">Зйомка якісного ролика без публікації - для вашої реклами чи сайту.
+                        </p>
+                    </div>
+
+                    <div class="glass-box">
+                        <div class="format-icon format-icon-chip format-icon-chip-events">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                xmlns="http://www.w3.org/2000/svg" class="format-icon-svg-events">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                        </div>
+                        <h3 class="format-card-title">Events & Відкриття</h3>
+                        <p class="format-card-desc">Присутність на події з оперативним висвітленням у сторіз та
+                            підсумковим роликом.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 9: PRICING & PACKAGES -->
+        <section id="pricing" class="section-slide">
+            <div class="container">
+                <span class="tag-pill">9. Pricing & Packages</span>
+                <h2 class="section-title">Вартість послуг та пакети</h2>
+                <p class="section-subtitle">Фіксовані ціни. Прозорі умови співпраці.</p>
+
+                <div class="pricing-cards-3grid">
+                    <!-- Stories Card -->
+                    <div class="glass-box pricing-card">
+                        <div class="pricing-badge">Stories</div>
+                        <div class="pricing-price">500 <span>грн</span></div>
+                        <h3 class="pricing-title">Instagram Stories</h3>
+                        <p class="pricing-desc">Щира рекомендація вашого продукту у сторіз із посиланням та відміткою.
+                        </p>
+                        <ul class="pricing-features">
+                            <li>✨ Жива подача у сторіз</li>
+                            <li>🔗 Пряме посилання на бренд</li>
+                            <li>📌 Відмітка профілю</li>
+                        </ul>
+                        <a href="https://t.me/denys_tsy" target="_blank" rel="noopener"
+                            class="btn btn-outline pricing-cta-btn">Обговорити Stories ↗</a>
+                    </div>
+
+                    <!-- TikTok / Instagram Video Card -->
+                    <div class="glass-box pricing-card">
+                        <div class="pricing-badge">TikTok / Instagram</div>
+                        <div class="pricing-price">1000 <span>грн</span></div>
+                        <h3 class="pricing-title">TikTok або Instagram Відео</h3>
+                        <p class="pricing-desc">Авторський ролик у TikTok або Instagram Reels: від сценарію до
+                            публікації — під ключ.</p>
+                        <ul class="pricing-features">
+                            <li>🎬 Повний продакшн & сценарій</li>
+                            <li>🔥 Формат під рекомендації FYP / Reels</li>
+                            <li>🎵 Посилання в описі / коментарях</li>
+                        </ul>
+                        <a href="https://t.me/denys_tsy" target="_blank" rel="noopener"
+                            class="btn btn-outline pricing-cta-btn">Обговорити Відео ↗</a>
+                    </div>
+
+                    <!-- Combo Package Card (BEST VALUE / HIT) -->
+                    <div class="glass-box pricing-card pricing-card-featured">
+                        <div class="featured-ribbon">🔥 Популярний вибір</div>
+                        <div class="pricing-badge">PRO Combo</div>
+                        <div class="pricing-price">1800 <span>грн</span></div>
+                        <h3 class="pricing-title">Reels + Stories + TikTok</h3>
+                        <p class="pricing-desc">Повна кампанія на двох платформах: TikTok + Instagram. Одна ціна —
+                            потрійне охоплення.</p>
+                        <ul class="pricing-features">
+                            <li>🌟 1x TikTok нативне відео</li>
+                            <li>📸 1x Instagram Reels</li>
+                            <li>📱 Серія Instagram Stories</li>
+                            <li>💰 Економія 700 грн проти окремих замовлень</li>
+                            <li>💬 Погодження сценарію до публікації</li>
+                        </ul>
+                        <a href="https://t.me/denys_tsy" target="_blank" rel="noopener"
+                            class="btn btn-glow pricing-cta-btn">Забронювати Пакет 🚀</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 10: ADVANTAGE & BUSINESS VALUE -->
+        <section id="why-me" class="section-slide">
+            <div class="container">
+                <span class="tag-pill">10. Value & Advantage</span>
+                <h2 class="section-title">Чому це працює & Переваги</h2>
+                <p class="section-subtitle">Головні переваги співпраці для вашого бренду.</p>
+
+                <div class="reasons-grid">
+                    <div class="glass-box bullet-point">
+                        <div class="bullet-check">✓</div>
+                        <div>
+                            <h4 class="reason-title">✨ Природна подача</h4>
+                            <p class="reason-desc">Контент сприймається як дружня порада і не викликає роздратування чи
+                                відторгнення.</p>
+                        </div>
+                    </div>
+
+                    <div class="glass-box bullet-point">
+                        <div class="bullet-check">✓</div>
+                        <div>
+                            <h4 class="reason-title">💖 Довіра аудиторії</h4>
+                            <p class="reason-desc">Підписники довіряють моєму вибору та із задоволенням дивляться
+                                огляди.</p>
+                        </div>
+                    </div>
+
+                    <div class="glass-box bullet-point">
+                        <div class="bullet-check">✓</div>
+                        <div>
+                            <h4 class="reason-title">🚀 Органічне охоплення</h4>
+                            <p class="reason-desc">Понад 93% переглядів ідуть із рекомендацій (FYP) без додаткових
+                                витрат на таргет.</p>
+                        </div>
+                    </div>
+
+                    <div class="glass-box bullet-point">
+                        <div class="bullet-check">✓</div>
+                        <div>
+                            <h4 class="reason-title">💎 Естетична презентація</h4>
+                            <p class="reason-desc">Ваш продукт виглядає красиво, стильно та привабливо у кожному кадрі.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 11: HOW WE WORK (WORKFLOW) -->
+        <section id="terms" class="section-slide">
+            <div class="container">
+                <span class="tag-pill">11. Process & Steps</span>
+                <h2 class="section-title">Як відбувається співпраця</h2>
+                <p class="section-subtitle">4 кроки від першого контакту до публікації.</p>
+
+                <div class="workflow-steps-4grid">
+                    <!-- Step 1 -->
+                    <div class="glass-box workflow-step-card">
+                        <div class="step-num-badge">01</div>
+                        <div class="step-icon">💬</div>
+                        <h3 class="step-title">Обговорення ідеї</h3>
+                        <p class="step-desc">Узгоджуємо завдання, дедлайни та ключові акценти бренду.</p>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="glass-box workflow-step-card">
+                        <div class="step-num-badge">02</div>
+                        <div class="step-icon">📦</div>
+                        <h3 class="step-title">Надсилання продукту</h3>
+                        <p class="step-desc">Ви надсилаєте товар або погоджуємо деталі візиту.</p>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="glass-box workflow-step-card">
+                        <div class="step-num-badge">03</div>
+                        <div class="step-icon">🎬</div>
+                        <h3 class="step-title">Зйомка & Монтаж</h3>
+                        <p class="step-desc">Створюю естетичний ролик і надсилаю вам на затвердження.</p>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="glass-box workflow-step-card">
+                        <div class="step-num-badge">04</div>
+                        <div class="step-icon">🚀</div>
+                        <h3 class="step-title">Публікація</h3>
+                        <p class="step-desc">Викладаю відео у найактивніший час для максимального охоплення.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 12: CONTACTS (VIP Instant Hotline) -->
+        <section id="contacts" class="section-slide">
+            <div class="container">
+                <div class="contacts-header-center">
+                    <span class="tag-pill">12. Contacts</span>
+                </div>
+
+                <div class="vip-hotline-card">
+                    <div class="status-pill-online status-pill-centered">
+                        <span class="status-dot-green"></span>
+                        <span>🟢 Менеджер на зв'язку</span>
+                    </div>
+
+                    <h2 class="vip-hotline-title">Бажаєте запустити спільну кампанію?</h2>
+                    <p class="vip-hotline-desc">
+                        Зв'яжіться з моїм менеджером у Telegram для узгодження ідеї, прорахунку вартості та бронювання
+                        дати публікації.
+                    </p>
+
                     <div>
-                        <div class="portrait-badge-name">Diana Scorpi</div>
-                        <div class="portrait-badge-role">TikTok & Instagram Creator</div>
+                        <a href="https://t.me/denys_tsy" target="_blank" rel="noopener"
+                            class="btn btn-glow vip-hotline-cta">
+                            💬 Написати менеджеру в Telegram (@denys_tsy) ↗
+                        </a>
                     </div>
-                    <div class="portrait-badge-views">
-                        1.2M+ Views/mo
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- SECTION 2: ABOUT -->
-    <section id="about" class="section-slide">
-        <div class="container">
-            <span class="tag-pill">2. About Diana</span>
-            <h2 class="section-title">Хто така Diana Scorpi</h2>
-            <p class="section-subtitle">Живий контент, стиль та щирі рекомендації.</p>
-
-            <div class="about-grid">
-                <div class="glass-box about-bio-card">
-                    <div class="about-bio-header">
-                        <span class="about-bio-icon">✨</span>
-                        <span class="about-bio-label">Кріейторка & Блогерка</span>
-                    </div>
-                    <p class="about-text-p">
-                        Я Діана - блогерка та кріейторка з Тернополя. Мій контент - це щирі студентські будні, навчання, відпочинок, мода та активний lifestyle.
-                    </p>
-                    <p class="about-text-p about-text-p-last">
-                        Для мене важливо, щоб кожна співпраця виглядала як дружня порада, а не реклама - саме тому глядачі довіряють моїм рекомендаціям, а відео регулярно потрапляють у рекомендації (FYP).
-                    </p>
-                </div>
-
-                <div class="about-features-grid">
-                    <div class="glass-box feature-card">
-                        <h4>✦ Природний формат</h4>
-                        <p class="feature-card-desc">Продукт гармонійно вплітається у сюжет відео.</p>
-                    </div>
-                    <div class="glass-box feature-card">
-                        <h4>⚡ Нові глядачі</h4>
-                        <p class="feature-card-desc">93.6% переглядів припадає на нову аудиторію.</p>
-                    </div>
-                    <div class="glass-box feature-card">
-                        <h4>◆ Якісний візуал</h4>
-                        <p class="feature-card-desc">Гарне світло, чіткий звук та динамічний монтаж.</p>
-                    </div>
-                    <div class="glass-box feature-card">
-                        <h4>◈ Активна спільнота</h4>
-                        <p class="feature-card-desc">Глядачі активно зберігають відео та діляться з друзями.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION 3: AUDIENCE SNAPSHOT -->
-    <section id="snapshot" class="section-slide">
-        <div class="ambient-light pos-bottom-left"></div>
-        <div class="container">
-            <span class="tag-pill">3. Audience Snapshot</span>
-            <h2 class="section-title">Головні цифри акаунту</h2>
-            <p class="section-subtitle">Ключові метрики за останні 30 днів активності.</p>
-
-            <div class="metrics-4grid">
-                <div class="glass-box metric-box-center">
-                    <div class="metric-big-num">88%</div>
-                    <div class="metric-title">Жіноча аудиторія</div>
-                    <div class="metric-subtext">Активні молоді дівчата та жінки</div>
-                </div>
-
-                <div class="glass-box metric-box-center">
-                    <div class="metric-big-num metric-age-pulse">
-                        <span class="age-num">18</span><span class="age-dash">-</span><span class="age-num">24</span>
-                    </div>
-                    <div class="metric-title">Ядро аудиторії</div>
-                    <div class="metric-subtext">Основний віковий сегмент ЦА</div>
-                </div>
-
-                <div class="glass-box metric-box-center">
-                    <div class="metric-big-num metric-cities-badge">
-                        <svg class="animated-pin-svg" viewBox="0 0 24 24" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22C12 22 19 14.25 19 9C19 5.13 15.87 2 12 2ZM12 11.5C10.62 11.5 9.5 10.38 9.5 9C9.5 7.62 10.62 6.5 12 6.5C13.38 6.5 14.5 7.62 14.5 9C14.5 10.38 13.38 11.5 12 11.5Z"
-                                fill="url(#pinGradient)" />
-                            <defs>
-                                <linearGradient id="pinGradient" x1="5" y1="2" x2="19" y2="22"
-                                    gradientUnits="userSpaceOnUse">
-                                    <stop stop-color="#ff2e93" />
-                                    <stop offset="1" stop-color="#ff80bf" />
-                                </linearGradient>
-                            </defs>
-                        </svg>
-                        <span class="city-name">Київ</span>
-                        <span class="city-dot">•</span>
-                        <span class="city-name">Львів</span>
-                    </div>
-                    <div class="metric-title">ТОП Міста</div>
-                    <div class="metric-subtext">А також Тернопіль та великі міста України</div>
-                </div>
-
-                <div class="glass-box metric-box-center">
-                    <div class="metric-big-num">2.4M+</div>
-                    <div class="metric-title">Загальні перегляди</div>
-                    <div class="metric-subtext">Сумарне охоплення відео</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION 4: SOCIAL MEDIA STATS -->
-    <section id="social" class="section-slide">
-        <div class="container">
-            <span class="tag-pill">4. Social Media Channels</span>
-            <h2 class="section-title">Статистика соцмереж за останні 30 днів</h2>
-            <p class="section-subtitle">Деталізовані показники по кожній із платформ.</p>
-
-            <div class="social-cards-grid">
-                <!-- TikTok Card -->
-                <div class="glass-box">
-                    <div class="social-card-head">
-                        <div class="social-brand-title social-brand-title-inner">
-                            <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"
+                    <div class="vip-social-links-row">
+                        <a href="https://www.tiktok.com/@diana.scorpi" target="_blank" rel="noopener"
+                            class="vip-social-pill">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"
                                 xmlns="http://www.w3.org/2000/svg" class="social-icon-tiktok">
                                 <path
                                     d="M19.589 6.686a4.793 4.793 0 01-3.77-4.245V2h-3.445v13.672a2.896 2.896 0 01-5.201 1.743 2.895 2.895 0 013.313-4.516v-3.5a6.384 6.384 0 00-1.026-.083 6.395 6.395 0 106.395 6.395V9.43a8.214 8.214 0 004.734 1.488V7.472a4.79 4.79 0 01-1.000-.786z" />
                             </svg>
-                            TikTok Analytics
-                        </div>
-                        <span class="social-handle">@diana.scorpi</span>
-                    </div>
-                    <div class="stats-list">
-                        <div class="stat-row">
-                            <span>Перегляди публікацій (30 днів):</span>
-                            <span>1,250,854</span>
-                        </div>
-                        <div class="stat-row">
-                            <span>Приріст нових читачів (30 днів):</span>
-                            <span>+285</span>
-                        </div>
-                        <div class="stat-row">
-                            <span>Унікальні охоплені акаунти:</span>
-                            <span>222,720</span>
-                        </div>
-                        <div class="stat-row">
-                            <span>Частка не-підписників (FYP Recommendations):</span>
-                            <span>93.6%</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Instagram Card -->
-                <div class="glass-box">
-                    <div class="social-card-head">
-                        <div class="social-brand-title social-brand-title-inner">
-                            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            <span>TikTok:</span>
+                            <span class="vip-social-handle">@diana.scorpi</span>
+                        </a>
+                        <a href="https://www.instagram.com/diana.scorpi" target="_blank" rel="noopener"
+                            class="vip-social-pill">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                                 xmlns="http://www.w3.org/2000/svg" class="social-icon-instagram">
                                 <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
                                 <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
                                 <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
                             </svg>
-                            Instagram Analytics
-                        </div>
-                        <span class="social-handle">@diana.scorpi</span>
-                    </div>
-                    <div class="stats-list">
-                        <div class="stat-row">
-                            <span>Загальні перегляди (30 днів):</span>
-                            <span>1,200,000+</span>
-                        </div>
-                        <div class="stat-row">
-                            <span>Уподобайки (Likes):</span>
-                            <span>36,100</span>
-                        </div>
-                        <div class="stat-row">
-                            <span>Поширення (Shares):</span>
-                            <span>18,500</span>
-                        </div>
-                        <div class="stat-row">
-                            <span>Перегляди профілю:</span>
-                            <span>47,300</span>
-                        </div>
+                            <span>Instagram:</span>
+                            <span class="vip-social-handle">@diana.scorpi</span>
+                        </a>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- SECTION 5: AUDIENCE DEMOGRAPHICS -->
-    <section id="demographics" class="section-slide">
-        <div class="container">
-            <span class="tag-pill">5. Audience Demographics</span>
-            <h2 class="section-title">Демографія & Джерела охоплення</h2>
-            <p class="section-subtitle">Розподіл аудиторії за статтю, віком та джерелами вірусного трафіку.</p>
-
-            <div class="demo-analytics-grid">
-                <!-- Left Card: Gender & Age Split -->
-                <div class="glass-box demo-card">
-                    <div class="demo-card-header">
-                        <div>
-                            <h3 class="demo-card-title">👩 Стать & Вік аудиторії</h3>
-                            <p class="demo-card-subtitle">Переважно жіноча платоспроможна молодь</p>
-                        </div>
-                        <span class="demo-highlight-badge">88% Жінки</span>
-                    </div>
-
-                    <div class="gender-progress-group">
-                        <div class="progress-bar-row">
-                            <div class="progress-bar-label">
-                                <span>👩 Жінки (18-24 роки)</span>
-                                <span>88%</span>
-                            </div>
-                            <div class="progress-track">
-                                <div class="progress-fill progress-female progress-fill-88"></div>
-                            </div>
-                        </div>
-
-                        <div class="progress-bar-row">
-                            <div class="progress-bar-label">
-                                <span>👨 Чоловіки</span>
-                                <span>12%</span>
-                            </div>
-                            <div class="progress-track">
-                                <div class="progress-fill progress-male progress-fill-12"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="demo-mini-stats">
-                        <div class="mini-stat-item">
-                            <div class="mini-stat-num">88.4%</div>
-                            <div class="mini-stat-label">Жіноча ЦА</div>
-                        </div>
-                        <div class="mini-stat-item">
-                            <div class="mini-stat-num">18-24</div>
-                            <div class="mini-stat-label">Основний вік</div>
-                        </div>
-                        <div class="mini-stat-item">
-                            <div class="mini-stat-num">98.2%</div>
-                            <div class="mini-stat-label">Україна</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Right Card: FYP Recommendation Boost -->
-                <div class="glass-box demo-card">
-                    <div class="demo-card-header">
-                        <div>
-                            <h3 class="demo-card-title">🚀 Джерела охоплення (FYP)</h3>
-                            <p class="demo-card-subtitle">Понад 93% переглядів - нові потенційні клієнти</p>
-                        </div>
-                        <span class="demo-highlight-badge fyp-badge">93.6% FYP</span>
-                    </div>
-
-                    <div class="fyp-chart-visual">
-                        <div class="fyp-donut-center">
-                            <div class="fyp-donut-value">93.6%</div>
-                            <div class="fyp-donut-label">FYP Top</div>
-                        </div>
-                        <canvas id="reachChartFull"></canvas>
-                    </div>
-
-                    <div class="fyp-features-list">
-                        <div class="fyp-feature-item">
-                            <span class="fyp-icon">🔥</span>
-                            <div>
-                                <div class="fyp-feature-title">Органічні рекомендації TikTok</div>
-                                <div class="fyp-feature-desc">93.6% глядачів дізнаються про бренд без платного таргету
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="proof-disclaimer-banner proof-banner-tight">
-                🛡️ Вся статистика за останні 30 днів підтверджена офіційними скріншотами з аналітики акаунтів.
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION 6: ACHIEVEMENTS -->
-    <section id="achievements" class="section-slide">
-        <div class="container">
-            <span class="tag-pill">6. Record Achievements</span>
-            <h2 class="section-title">Рекордні досягнення</h2>
-            <p class="section-subtitle">Показники пікової вірусності та активності за останні 30 днів.</p>
-
-            <div class="achievements-grid">
-                <div class="glass-box">
-                    <div class="achievement-icon">🏆</div>
-                    <div class="metric-big-num">380.5K</div>
-                    <div class="metric-title">Найбільший ролик за 30 днів</div>
-                    <div class="metric-subtext">Органічне вірусне охоплення TikTok</div>
-                </div>
-
-                <div class="glass-box">
-                    <div class="achievement-icon">📈</div>
-                    <div class="metric-big-num">1.25M+</div>
-                    <div class="metric-title">Найкращий місяць переглядів</div>
-                    <div class="metric-subtext">Стабільна динаміка зростання</div>
-                </div>
-
-                <div class="glass-box">
-                    <div class="achievement-icon">🔥</div>
-                    <div class="metric-big-num">18.5K</div>
-                    <div class="metric-title">Вірусні поширення</div>
-                    <div class="metric-subtext">Глядачі активно діляться роликами</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION 7: BRAND CASES / INTEGRATIONS (OPTION 7.1) -->
-    <section id="cases" class="section-slide">
-        <div class="container">
-            <span class="tag-pill">7. Portfolio</span>
-            <div class="cases-header-row">
-                <h2 class="section-title cases-title-flush">Приклади інтеграцій</h2>
-                <span class="case-live-badge">
-                    <span class="case-live-dot"></span> Live TikTok Sync
-                </span>
-            </div>
-            <p class="section-subtitle cases-subtitle-spaced">Натискайте на бренд праворуч для перегляду ролика у
-                форматі TikTok та точної статистики.</p>
-
-            <div class="v1-split-grid">
-                <!-- Left: Hero Player Card with Native 9:16 Vertical Video Frame -->
-                <div class="v1-hero-player">
-                    <div class="v1-hero-thumb-vertical">
-                        <img id="v1-hero-cover" src="assets/images/video1-cover.jpg" alt="Featured Case Cover"
-                            class="v1-hero-img">
-                        <a id="v1-hero-play-link" href="https://www.tiktok.com/@diana.scorpi/video/7665250133474315540"
-                            target="_blank" rel="noopener" class="video-play-icon">▶</a>
-                        <div class="tiktok-overlay-gradient"></div>
-                        <div class="tiktok-badge-category" id="v1-hero-category">Beverage</div>
-                        <div class="tiktok-stats-bar hero-stats-bar-vertical">
-                            <span id="v1-hero-views">25.3K Переглядів</span>
-                            <span id="v1-hero-likes">657 Лайків</span>
-                        </div>
-                    </div>
-
-                    <div class="v1-hero-content">
-                        <div>
-                            <h3 id="v1-hero-title" class="hero-case-title">Лимонади «ТернОпілля»</h3>
-                            <div class="hero-tag-wrapper">
-                                <span id="v1-hero-tag" class="hero-case-tag">+25.3K FYP Reach</span>
-                            </div>
-                            <p id="v1-hero-desc" class="hero-case-desc">Нативна літня інтеграція лимонадів «ТернОпілля»
-                                від компанії Опілля. Органічний сценарій пікніка з адаптацією під тренди TikTok.</p>
-                        </div>
-
-                        <div>
-                            <div class="hero-status-box">
-                                <div>
-                                    <div class="hero-status-label">Статус кейсу</div>
-                                    <div id="v1-hero-status" class="hero-status-value">Опубліковано</div>
-                                </div>
-                                <div>
-                                    <div class="hero-status-label-right">Джерело ЦА</div>
-                                    <div id="v1-hero-source" class="hero-source-value">Рекомендації (FYP)</div>
-                                </div>
-                            </div>
-
-                            <a id="v1-hero-btn" href="https://www.tiktok.com/@diana.scorpi/video/7665250133474315540"
-                                target="_blank" rel="noopener" class="btn btn-glow hero-case-btn">
-                                ▶ Переглянути ролик у TikTok ↗
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Right: Interactive Brand Selection Menu -->
-                <div class="v1-brand-list">
-                    <div class="v1-brand-item active">
-                        <div>
-                            <div class="brand-item-name">ТернОпілля</div>
-                            <div class="brand-item-category">Лимонади & Напої</div>
-                        </div>
-                        <span class="brand-item-views" id="v1-side-views-0">25.3K</span>
-                    </div>
-
-                    <div class="v1-brand-item">
-                        <div>
-                            <div class="brand-item-name">Food Fest</div>
-                            <div class="brand-item-category">Гастро Фестиваль</div>
-                        </div>
-                        <span class="brand-item-views" id="v1-side-views-1">20.3K</span>
-                    </div>
-
-                    <div class="v1-brand-item">
-                        <div>
-                            <div class="brand-item-name">Догляд Волосся</div>
-                            <div class="brand-item-category">Beauty & Care</div>
-                        </div>
-                        <span class="brand-item-views" id="v1-side-views-2">13.9K</span>
-                    </div>
-
-                    <div class="v1-brand-item">
-                        <div>
-                            <div class="brand-item-name">Parfum City</div>
-                            <div class="brand-item-category">Парфумерія & Beauty</div>
-                        </div>
-                        <span class="brand-item-views" id="v1-side-views-3">25.2K</span>
-                    </div>
-
-                    <div class="v1-brand-item">
-                        <div>
-                            <div class="brand-item-name">Luxord Home</div>
-                            <div class="brand-item-category">Home Care & Декор</div>
-                        </div>
-                        <span class="brand-item-views" id="v1-side-views-4">13.3K</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION 8: FORMATS -->
-    <section id="formats" class="section-slide">
-        <div class="container">
-            <span class="tag-pill">8. Formats & Services</span>
-            <h2 class="section-title">Формати співпраці</h2>
-            <p class="section-subtitle">Варіанти рекламного контенту під задачі вашого бренду.</p>
-
-            <div class="formats-cards-3grid">
-                <div class="glass-box">
-                    <div class="format-icon format-icon-chip format-icon-chip-tiktok">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
-                            xmlns="http://www.w3.org/2000/svg" class="format-icon-svg-tiktok">
-                            <path
-                                d="M19.589 6.686a4.793 4.793 0 01-3.77-4.245V2h-3.445v13.672a2.896 2.896 0 01-5.201 1.743 2.895 2.895 0 013.313-4.516v-3.5a6.384 6.384 0 00-1.026-.083 6.395 6.395 0 106.395 6.395V9.43a8.214 8.214 0 004.734 1.488V7.472a4.79 4.79 0 01-1.000-.786z" />
-                        </svg>
-                    </div>
-                    <h3 class="format-card-title">TikTok Відео</h3>
-                    <p class="format-card-desc">Нативний ролик із гармонійним оглядом продукту у влозі чи розпаковці.</p>
-                </div>
-
-                <div class="glass-box">
-                    <div class="format-icon format-icon-chip format-icon-chip-instagram">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            xmlns="http://www.w3.org/2000/svg" class="format-icon-svg-instagram">
-                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                        </svg>
-                    </div>
-                    <h3 class="format-card-title">Instagram Reels</h3>
-                    <p class="format-card-desc">Естетичний ролик у стрічку з акцентом на візуал та детальну відмітку бренду.</p>
-                </div>
-
-                <div class="glass-box">
-                    <div class="format-icon format-icon-chip format-icon-chip-stories">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            xmlns="http://www.w3.org/2000/svg" class="format-icon-svg-stories">
-                            <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
-                            <line x1="12" y1="18" x2="12.01" y2="18"></line>
-                        </svg>
-                    </div>
-                    <h3 class="format-card-title">Instagram Stories</h3>
-                    <p class="format-card-desc">Серія з 3-5 живих сторіз із розпаковкою, промокодом та прямим посиланням.</p>
-                </div>
-
-                <div class="glass-box">
-                    <div class="format-icon format-icon-chip format-icon-chip-combo">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            xmlns="http://www.w3.org/2000/svg" class="format-icon-svg-combo">
-                            <polygon
-                                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
-                            </polygon>
-                        </svg>
-                    </div>
-                    <h3 class="format-card-title">Комплексна реклама</h3>
-                    <p class="format-card-desc">Публікація TikTok + Reels + Stories для охоплення всієї аудиторії.</p>
-                </div>
-
-                <div class="glass-box">
-                    <div class="format-icon format-icon-chip format-icon-chip-ugc">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            xmlns="http://www.w3.org/2000/svg" class="format-icon-svg-ugc">
-                            <path d="M23 7l-7 5 7 5V7z"></path>
-                            <rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect>
-                        </svg>
-                    </div>
-                    <h3 class="format-card-title">UGC Контент</h3>
-                    <p class="format-card-desc">Зйомка якісного ролика без публікації - для вашої реклами чи сайту.</p>
-                </div>
-
-                <div class="glass-box">
-                    <div class="format-icon format-icon-chip format-icon-chip-events">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            xmlns="http://www.w3.org/2000/svg" class="format-icon-svg-events">
-                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                            <circle cx="12" cy="10" r="3"></circle>
-                        </svg>
-                    </div>
-                    <h3 class="format-card-title">Events & Відкриття</h3>
-                    <p class="format-card-desc">Присутність на події з оперативним висвітленням у сторіз та підсумковим роликом.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION 9: PRICING & PACKAGES -->
-    <section id="pricing" class="section-slide">
-        <div class="container">
-            <span class="tag-pill">9. Pricing & Packages</span>
-            <h2 class="section-title">Вартість послуг та пакети</h2>
-            <p class="section-subtitle">Прозорі ціни та зручні пакети співпраці.</p>
-
-            <div class="pricing-cards-3grid">
-                <!-- Stories Card -->
-                <div class="glass-box pricing-card">
-                    <div class="pricing-badge">Stories</div>
-                    <div class="pricing-price">500 <span>грн</span></div>
-                    <h3 class="pricing-title">Instagram Stories</h3>
-                    <p class="pricing-desc">Щира рекомендація вашого продукту у сторіз із посиланням та відміткою.</p>
-                    <ul class="pricing-features">
-                        <li>✨ Жива подача у сторіз</li>
-                        <li>🔗 Пряме посилання на бренд</li>
-                        <li>📌 Відмітка профілю</li>
-                    </ul>
-                    <a href="https://t.me/denys_tsy" target="_blank" rel="noopener"
-                        class="btn btn-outline pricing-cta-btn">Замовити Stories ↗</a>
-                </div>
-
-                <!-- TikTok / Instagram Video Card -->
-                <div class="glass-box pricing-card">
-                    <div class="pricing-badge">TikTok / Instagram</div>
-                    <div class="pricing-price">1000 <span>грн</span></div>
-                    <h3 class="pricing-title">TikTok або Instagram Відео</h3>
-                    <p class="pricing-desc">Створення та публікація окремого ролику в TikTok або Instagram Reels з оглядом продукції.</p>
-                    <ul class="pricing-features">
-                        <li>🎬 Повний продакшн & сценарій</li>
-                        <li>🔥 Шанс потрапляння в FYP / Reels</li>
-                        <li>🎵 Посилання в описі / коментарях</li>
-                    </ul>
-                    <a href="https://t.me/denys_tsy" target="_blank" rel="noopener"
-                        class="btn btn-outline pricing-cta-btn">Замовити Відео ↗</a>
-                </div>
-
-                <!-- Combo Package Card (BEST VALUE / HIT) -->
-                <div class="glass-box pricing-card pricing-card-featured">
-                    <div class="featured-ribbon">🔥 Популярний вибір</div>
-                    <div class="pricing-badge">PRO Combo</div>
-                    <div class="pricing-price">1800 <span>грн</span></div>
-                    <h3 class="pricing-title">Reels + Stories + TikTok</h3>
-                    <p class="pricing-desc">Повноцінна рекламні кампанія одразу на двох платформах за вигідною ціною.</p>
-                    <ul class="pricing-features">
-                        <li>🌟 1x TikTok нативне відео</li>
-                        <li>📸 1x Instagram Reels</li>
-                        <li>📱 Серія Instagram Stories</li>
-                        <li>🚀 Максимальне охоплення ЦА</li>
-                    </ul>
-                    <a href="https://t.me/denys_tsy" target="_blank" rel="noopener"
-                        class="btn btn-glow pricing-cta-btn">Замовити Пакет 🚀</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION 10: ADVANTAGE & BUSINESS VALUE -->
-    <section id="why-me" class="section-slide">
-        <div class="container">
-            <span class="tag-pill">10. Value & Advantage</span>
-            <h2 class="section-title">Чому це працює & Переваги</h2>
-            <p class="section-subtitle">Головні переваги співпраці для вашого бренду.</p>
-
-            <div class="reasons-grid">
-                <div class="glass-box bullet-point">
-                    <div class="bullet-check">✓</div>
-                    <div>
-                        <h4 class="reason-title">✨ Природна подача</h4>
-                        <p class="reason-desc">Контент сприймається як дружня порада і не викликає роздратування чи відторгнення.</p>
-                    </div>
-                </div>
-
-                <div class="glass-box bullet-point">
-                    <div class="bullet-check">✓</div>
-                    <div>
-                        <h4 class="reason-title">💖 Довіра аудиторії</h4>
-                        <p class="reason-desc">Підписники довіряють моєму вибору та із задоволенням дивляться огляди.</p>
-                    </div>
-                </div>
-
-                <div class="glass-box bullet-point">
-                    <div class="bullet-check">✓</div>
-                    <div>
-                        <h4 class="reason-title">🚀 Органічне охоплення</h4>
-                        <p class="reason-desc">Понад 93% переглядів ідуть із рекомендацій (FYP) без додаткових витрат на таргет.</p>
-                    </div>
-                </div>
-
-                <div class="glass-box bullet-point">
-                    <div class="bullet-check">✓</div>
-                    <div>
-                        <h4 class="reason-title">💎 Естетична презентація</h4>
-                        <p class="reason-desc">Ваш продукт виглядає красиво, стильно та привабливо у кожному кадрі.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION 11: HOW WE WORK (WORKFLOW) -->
-    <section id="terms" class="section-slide">
-        <div class="container">
-            <span class="tag-pill">11. Process & Steps</span>
-            <h2 class="section-title">Як відбувається співпраця</h2>
-            <p class="section-subtitle">4 кроки від першого контакту до публікації.</p>
-
-            <div class="workflow-steps-4grid">
-                <!-- Step 1 -->
-                <div class="glass-box workflow-step-card">
-                    <div class="step-num-badge">01</div>
-                    <div class="step-icon">💬</div>
-                    <h3 class="step-title">Обговорення ідеї</h3>
-                    <p class="step-desc">Узгоджуємо завдання, дедлайни та ключові акценти бренду.</p>
-                </div>
-
-                <!-- Step 2 -->
-                <div class="glass-box workflow-step-card">
-                    <div class="step-num-badge">02</div>
-                    <div class="step-icon">📦</div>
-                    <h3 class="step-title">Надсилання продукту</h3>
-                    <p class="step-desc">Ви надсилаєте товар або погоджуємо деталі візиту.</p>
-                </div>
-
-                <!-- Step 3 -->
-                <div class="glass-box workflow-step-card">
-                    <div class="step-num-badge">03</div>
-                    <div class="step-icon">🎬</div>
-                    <h3 class="step-title">Зйомка & Монтаж</h3>
-                    <p class="step-desc">Створюю естетичний ролик і надсилаю вам на затвердження.</p>
-                </div>
-
-                <!-- Step 4 -->
-                <div class="glass-box workflow-step-card">
-                    <div class="step-num-badge">04</div>
-                    <div class="step-icon">🚀</div>
-                    <h3 class="step-title">Публікація</h3>
-                    <p class="step-desc">Викладаю відео у найактивніший час для максимального охоплення.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION 12: CONTACTS (VIP Instant Hotline) -->
-    <section id="contacts" class="section-slide">
-        <div class="container">
-            <div class="contacts-header-center">
-                <span class="tag-pill">12. Contacts</span>
-            </div>
-
-            <div class="vip-hotline-card">
-                <div class="status-pill-online status-pill-centered">
-                    <span class="status-dot-green"></span>
-                    <span>🟢 Менеджер на зв'язку</span>
-                </div>
-
-                <h2 class="vip-hotline-title">Бажаєте запустити спільну кампанію?</h2>
-                <p class="vip-hotline-desc">
-                    Зв'яжіться з моїм менеджером у Telegram для узгодження ідеї, прорахунку вартості та бронювання дати публікації.
+        <!-- SECTION 13: THANK YOU -->
+        <section id="thank-you" class="section-slide">
+            <div class="container thank-you-center">
+                <span class="tag-pill">13. Thank You</span>
+                <h2 class="thank-you-title">Дякуємо за увагу! ✨</h2>
+                <p class="thank-you-subtitle">
+                    Буду рада співпраці та новим спільним проектам! ✨
                 </p>
 
-                <div>
-                    <a href="https://t.me/denys_tsy" target="_blank" rel="noopener"
-                        class="btn btn-glow vip-hotline-cta">
-                        💬 Написати менеджеру в Telegram (@denys_tsy) ↗
-                    </a>
-                </div>
-
-                <div class="vip-social-links-row">
-                    <a href="https://www.tiktok.com/@diana.scorpi" target="_blank" rel="noopener"
-                        class="vip-social-pill">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"
-                            xmlns="http://www.w3.org/2000/svg" class="social-icon-tiktok">
-                            <path
-                                d="M19.589 6.686a4.793 4.793 0 01-3.77-4.245V2h-3.445v13.672a2.896 2.896 0 01-5.201 1.743 2.895 2.895 0 013.313-4.516v-3.5a6.384 6.384 0 00-1.026-.083 6.395 6.395 0 106.395 6.395V9.43a8.214 8.214 0 004.734 1.488V7.472a4.79 4.79 0 01-1.000-.786z" />
-                        </svg>
-                        <span>TikTok:</span>
-                        <span class="vip-social-handle">@diana.scorpi</span>
-                    </a>
-                    <a href="https://www.instagram.com/diana.scorpi" target="_blank" rel="noopener"
-                        class="vip-social-pill">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            xmlns="http://www.w3.org/2000/svg" class="social-icon-instagram">
-                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                        </svg>
-                        <span>Instagram:</span>
-                        <span class="vip-social-handle">@diana.scorpi</span>
-                    </a>
+                <div class="thank-you-actions">
+                    <button type="button" data-action="print" class="btn btn-glow thank-you-btn">
+                        📥 Завантажити Media Kit (PDF)
+                    </button>
+                    <button type="button" data-action="scroll-top" class="btn btn-outline thank-you-btn">
+                        ↑ Повернутися на початок
+                    </button>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- SECTION 13: THANK YOU -->
-    <section id="thank-you" class="section-slide">
-        <div class="container thank-you-center">
-            <span class="tag-pill">13. Thank You</span>
-            <h1 class="thank-you-title">Дякуємо за увагу! ✨</h1>
-            <p class="thank-you-subtitle">
-                Буду рада співпраці та новим спільним проектам! ✨
-            </p>
-
-            <div class="thank-you-actions">
-                <button type="button" data-action="print" class="btn btn-glow thank-you-btn">
-                    📥 Завантажити Media Kit (PDF)
-                </button>
-                <button type="button" data-action="scroll-top" class="btn btn-outline thank-you-btn">
-                    ↑ Повернутися на початок
-                </button>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- Back to top button -->
     <button type="button" class="back-to-top" id="backToTop" title="Нагору" aria-label="Нагору">↑</button>

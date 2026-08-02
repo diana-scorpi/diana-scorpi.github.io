@@ -12,6 +12,7 @@
     var heroCover, heroTitle, heroCategory, heroViews, heroLikes,
         heroTag, heroDesc, heroStatus, heroSource, heroPlayLink, heroBtn;
 
+    /** Cache all hero-player and brand-list DOM references once. */
     function cacheDom() {
         brandItems = Array.prototype.slice.call(document.querySelectorAll('.v1-brand-item'));
         heroCover = document.getElementById('v1-hero-cover');
@@ -27,6 +28,10 @@
         heroBtn = document.getElementById('v1-hero-btn');
     }
 
+    /**
+     * Switch the hero player to the case at the given index.
+     * @param {number} index - Zero-based index into v1CasesData.
+     */
     function selectCaseV1(index) {
         var data = v1CasesData[index];
         if (!data) return;
@@ -49,6 +54,7 @@
         heroBtn.href = data.link;
     }
 
+    /** Bind click handlers to the brand list items. */
     function bindBrandItems() {
         brandItems.forEach(function (item, idx) {
             item.addEventListener('click', function () {
@@ -57,50 +63,74 @@
         });
     }
 
-    function fetchLiveTikTokMetrics() {
-        tiktokVideoIds.forEach(function (v) {
-            (async function () {
-                try {
-                    var proxyUrl = 'https://api.allorigins.win/get?url=' + encodeURIComponent(v.url);
-                    var res = await fetch(proxyUrl);
-                    if (!res.ok) return;
-                    var data = await res.json();
-                    var html = data.contents || '';
+    /**
+     * Fetch live view/like counts for one TikTok video through a CORS proxy
+     * and update the case data + DOM. Aborts after 8s so a slow proxy can
+     * never hang the UI; any failure falls back to the static values.
+     * @param {{id: string, url: string, idx: number}} video
+     * @returns {Promise<void>} Always resolves (never rejects).
+     */
+    function fetchVideoMetrics(video) {
+        var controller = new AbortController();
+        var timeoutId = setTimeout(function () { controller.abort(); }, 8000);
 
-                    var diggMatch = html.match(/"diggCount":(\d+)/);
-                    var playMatch = html.match(/"playCount":(\d+)/);
+        var proxyUrl = 'https://api.allorigins.win/get?url=' + encodeURIComponent(video.url);
 
-                    if (playMatch && playMatch[1]) {
-                        var viewsNum = parseInt(playMatch[1], 10);
-                        var viewsFormatted = formatCompact(viewsNum);
+        return fetch(proxyUrl, { signal: controller.signal })
+            .then(function (res) {
+                if (!res.ok) return null;
+                return res.json();
+            })
+            .then(function (data) {
+                if (!data) return;
+                var html = data.contents || '';
 
-                        v1CasesData[v.idx].views = viewsFormatted + ' Переглядів';
-                        var sideEl = document.getElementById('v1-side-views-' + v.idx);
-                        if (sideEl) sideEl.innerText = viewsFormatted;
+                var diggMatch = html.match(/"diggCount":(\d+)/);
+                var playMatch = html.match(/"playCount":(\d+)/);
 
-                        var activeItem = document.querySelector('.v1-brand-item.active');
-                        if (activeItem && brandItems.indexOf(activeItem) === v.idx) {
-                            if (heroViews) heroViews.innerText = viewsFormatted + ' Переглядів';
-                        }
+                if (playMatch && playMatch[1]) {
+                    var viewsNum = parseInt(playMatch[1], 10);
+                    var viewsFormatted = formatCompact(viewsNum);
+
+                    v1CasesData[video.idx].views = viewsFormatted + ' Переглядів';
+                    var sideEl = document.getElementById('v1-side-views-' + video.idx);
+                    if (sideEl) sideEl.innerText = viewsFormatted;
+
+                    var activeItem = document.querySelector('.v1-brand-item.active');
+                    if (activeItem && brandItems.indexOf(activeItem) === video.idx) {
+                        if (heroViews) heroViews.innerText = viewsFormatted + ' Переглядів';
                     }
-
-                    if (diggMatch && diggMatch[1]) {
-                        var likesNum = parseInt(diggMatch[1], 10);
-                        var likesFormatted = formatCompact(likesNum);
-
-                        v1CasesData[v.idx].likes = likesFormatted + ' Лайків';
-                        var activeItem2 = document.querySelector('.v1-brand-item.active');
-                        if (activeItem2 && brandItems.indexOf(activeItem2) === v.idx) {
-                            if (heroLikes) heroLikes.innerText = likesFormatted + ' Лайків';
-                        }
-                    }
-                } catch (err) {
-                    // Graceful fallback to static pre-rendered values
                 }
-            })();
-        });
+
+                if (diggMatch && diggMatch[1]) {
+                    var likesNum = parseInt(diggMatch[1], 10);
+                    var likesFormatted = formatCompact(likesNum);
+
+                    v1CasesData[video.idx].likes = likesFormatted + ' Лайків';
+                    var activeItem2 = document.querySelector('.v1-brand-item.active');
+                    if (activeItem2 && brandItems.indexOf(activeItem2) === video.idx) {
+                        if (heroLikes) heroLikes.innerText = likesFormatted + ' Лайків';
+                    }
+                }
+            })
+            .catch(function () {
+                // Graceful fallback to static pre-rendered values (incl. abort/timeout)
+            })
+            .then(function () {
+                clearTimeout(timeoutId);
+            });
     }
 
+    /**
+     * Fetch live metrics for all configured TikTok videos in parallel.
+     * Promise.allSettled keeps per-item isolation: one failure never
+     * affects the others and no rejection is ever unhandled.
+     */
+    function fetchLiveTikTokMetrics() {
+        Promise.allSettled(tiktokVideoIds.map(fetchVideoMetrics));
+    }
+
+    /** Initialise the cases module. */
     function init() {
         cacheDom();
         bindBrandItems();

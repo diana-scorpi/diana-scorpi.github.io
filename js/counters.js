@@ -4,6 +4,12 @@
 
     window.MediaKit = window.MediaKit || {};
 
+    /**
+     * Animate every .metric-big-num from 0 to its target value the first time
+     * it enters the viewport. Each element is unobserved right after its
+     * animation starts, so the observer retains no references once all
+     * counters have run (one-shot, no leak).
+     */
     function animateCounters() {
         var counters = document.querySelectorAll('.metric-big-num');
         var observer = new IntersectionObserver(function (entries) {
@@ -14,6 +20,7 @@
 
                 if (entry.isIntersecting && !entry.target.classList.contains('counted')) {
                     entry.target.classList.add('counted');
+                    observer.unobserve(entry.target);
                     var targetText = entry.target.getAttribute('data-count') || entry.target.innerText.trim();
                     entry.target.setAttribute('data-count', targetText);
 

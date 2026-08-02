@@ -4,6 +4,7 @@
 
     window.MediaKit = window.MediaKit || {};
 
+    /** Bind window.print() to every [data-action="print"] button. */
     function bindPrintButtons() {
         var printBtns = document.querySelectorAll('[data-action="print"]');
         Array.prototype.forEach.call(printBtns, function (btn) {
@@ -13,6 +14,7 @@
         });
     }
 
+    /** Initialise all MediaKit modules (each guard-checked) and page controls. */
     function init() {
         var MK = window.MediaKit;
 

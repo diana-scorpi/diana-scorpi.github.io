@@ -1,0 +1,32 @@
+{
+    "root": true,
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "globals": {
+        "Chart": "readonly",
+        "dataLayer": "writable"
+    },
+    "parserOptions": {
+        "ecmaVersion": 2021,
+        "sourceType": "script"
+    },
+    "rules": {
+        "no-unused-vars": [
+            "warn",
+            {
+                "args": "none"
+            }
+        ],
+        "no-undef": "error",
+        "no-redeclare": "error",
+        "no-unreachable": "error",
+        "no-constant-condition": "warn",
+        "eqeqeq": [
+            "warn",
+            "smart"
+        ],
+        "no-implicit-globals": "off"
+    }
+}

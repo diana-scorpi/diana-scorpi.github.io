@@ -5,8 +5,10 @@
     window.MediaKit = window.MediaKit || {};
 
     window.MediaKit.config = {
+        /** Google Analytics measurement ID (used by analytics.js). */
         gaId: 'G-BXNRM9J4Q9',
 
+        /** Static fallback data for the Section 7 hero case switcher. */
         v1CasesData: [
             {
                 title: "Лимонади «ТернОпілля»",
@@ -70,6 +72,7 @@
             }
         ],
 
+        /** TikTok videos polled for live view/like metrics (idx maps to v1CasesData). */
         tiktokVideoIds: [
             { id: '7665250133474315540', url: 'https://www.tiktok.com/@diana.scorpi/video/7665250133474315540', idx: 0 },
             { id: '7652416548442852629', url: 'https://www.tiktok.com/@diana.scorpi/video/7652416548442852629', idx: 1 },
