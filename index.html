@@ -1111,22 +1111,93 @@
         .tiktok-overlay-gradient {
             position: absolute;
             inset: 0;
-            background: linear-gradient(to top, rgba(18, 5, 18, 0.95) 0%, rgba(0,0,0,0.15) 50%, rgba(0,0,0,0.4) 100%);
+            background: linear-gradient(to top, rgba(18, 5, 18, 0.95) 0%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.5) 100%);
+            z-index: 2;
+        }
+
+        .brand-video-chip {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: 5;
+            background: rgba(18, 5, 18, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 46, 147, 0.4);
+            border-radius: 12px;
+            padding: 6px 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            transition: all 0.3s ease;
+        }
+
+        .brand-video-chip img {
+            height: 28px;
+            max-width: 100px;
+            object-fit: contain;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.6));
+        }
+
+        .v1-brand-logo-small {
+            height: 38px;
+            max-width: 125px;
+            object-fit: contain;
+            filter: drop-shadow(0 2px 6px rgba(0,0,0,0.6));
+            transition: transform 0.3s ease;
+        }
+
+        .v1-brand-item:hover .v1-brand-logo-small,
+        .v1-brand-item.active .v1-brand-logo-small {
+            transform: scale(1.08);
+        }
+
+        .tiktok-card:hover .brand-video-chip {
+            border-color: var(--accent-purple);
+            box-shadow: 0 6px 20px rgba(255, 46, 147, 0.45);
+            transform: scale(1.06);
+        }
+
+        .video-play-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255, 46, 147, 0.9) 0%, rgba(217, 70, 239, 0.9) 100%);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 15px;
+            padding-left: 3px;
+            box-shadow: 0 0 20px rgba(255, 46, 147, 0.6);
+            z-index: 4;
+            transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .tiktok-card:hover .video-play-icon {
+            transform: translate(-50%, -50%) scale(1.18);
+            box-shadow: 0 0 30px rgba(255, 46, 147, 0.95);
         }
 
         .tiktok-badge-category {
             position: absolute;
-            top: 12px;
-            left: 12px;
-            background: rgba(255, 46, 147, 0.9);
+            top: 10px;
+            right: 10px;
+            z-index: 5;
+            background: rgba(255, 46, 147, 0.85);
             backdrop-filter: blur(8px);
             color: #fff;
-            font-size: 10px;
+            font-size: 9px;
             font-weight: 800;
-            padding: 4px 10px;
+            padding: 4px 9px;
             border-radius: 9999px;
             text-transform: uppercase;
             letter-spacing: 0.5px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
         }
 
         .tiktok-stats-bar {
@@ -1134,6 +1205,7 @@
             bottom: 10px;
             left: 12px;
             right: 12px;
+            z-index: 5;
             display: flex;
             gap: 10px;
             font-size: 11px;
@@ -1163,6 +1235,85 @@
             line-height: 1.4;
             flex-grow: 1;
         }
+
+        /* Section 7: Split Showcase (Native 9:16 Vertical Video Frame) */
+        .v1-split-grid {
+            display: grid;
+            grid-template-columns: 1.4fr 1fr;
+            gap: 28px;
+            margin-top: 20px;
+            align-items: center;
+            width: 100%;
+        }
+
+        .v1-hero-player {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border-accent);
+            border-radius: 26px;
+            padding: 24px;
+            position: relative;
+            box-shadow: 0 20px 50px rgba(255, 46, 147, 0.22);
+            backdrop-filter: blur(20px);
+            display: flex;
+            gap: 24px;
+            align-items: center;
+        }
+
+        .v1-hero-thumb-vertical {
+            position: relative;
+            width: 210px;
+            min-width: 210px;
+            height: 340px;
+            border-radius: 20px;
+            overflow: hidden;
+            background: #000;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+            flex-shrink: 0;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        .v1-hero-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            transition: all 0.5s ease;
+        }
+
+        .v1-hero-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+            flex-grow: 1;
+        }
+
+        .v1-brand-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .v1-brand-item {
+            padding: 14px 18px;
+            border-radius: 18px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .v1-brand-item:hover, .v1-brand-item.active {
+            background: rgba(255, 46, 147, 0.15);
+            border-color: var(--accent-purple);
+            transform: translateX(6px);
+            box-shadow: 0 8px 24px rgba(255, 46, 147, 0.25);
+        }
+
+
 
         .tiktok-play-btn {
             font-size: 12px;
@@ -1968,7 +2119,7 @@
         </div>
     </section>
 
-    <!-- SECTION 7: BRAND CASES / INTEGRATIONS -->
+    <!-- SECTION 7: BRAND CASES / INTEGRATIONS (OPTION 7.1) -->
     <section id="cases" class="section-slide">
         <div class="container">
             <span class="tag-pill">7. Portfolio</span>
@@ -1978,174 +2129,90 @@
                     <span style="width: 6px; height: 6px; background: #22c55e; border-radius: 50%; display: inline-block;"></span> Live TikTok Sync
                 </span>
             </div>
-            <p class="section-subtitle" style="margin-top: 8px; margin-bottom: 20px;">Реальні рекламні кейси з живим оновленням статистики. Натисніть на інтеграцію для перегляду ролика.</p>
+            <p class="section-subtitle" style="margin-top: 8px; margin-bottom: 18px;">Натискайте на бренд праворуч для перегляду ролика у форматі TikTok та точної статистики.</p>
 
-            <!-- Social Proof: Trusted Real Brand Logos -->
-            <div style="margin-bottom: 32px;">
-                <div style="font-size: 12px; font-family: 'Outfit'; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent-pink); font-weight: 800; margin-bottom: 14px;">🤝 Бренди та компанії, з якими я вже співпрацювала (Social Proof):</div>
-                <div class="brand-logos-grid">
-                    <div class="glass-box brand-logo-card">
-                        <div class="brand-logo-img-wrapper" style="background: rgba(255,255,255,0.04);">
-                            <img src="assets/images/brand-ternopillya-transparent.png" alt="ТернОпілля Лимонади" class="brand-logo-img" style="object-fit: contain;">
-                        </div>
-                        <div class="brand-logo-info">
-                            <span class="brand-logo-title">ТернОпілля</span>
-                            <span class="brand-logo-category">Лимонади & Напої</span>
-                        </div>
-                    </div>
-
-                    <div class="glass-box brand-logo-card">
-                        <div class="brand-logo-img-wrapper" style="background: rgba(255,255,255,0.04);">
-                            <img src="assets/images/brand-foodfest-transparent.png" alt="Food Fest" class="brand-logo-img" style="object-fit: contain;">
-                        </div>
-                        <div class="brand-logo-info">
-                            <span class="brand-logo-title">Food Fest</span>
-                            <span class="brand-logo-category">Гастро Фестиваль</span>
-                        </div>
-                    </div>
-
-                    <div class="glass-box brand-logo-card">
-                        <div class="brand-logo-img-wrapper" style="background: rgba(255,255,255,0.95); padding: 6px; border-radius: 12px;">
-                            <img src="assets/images/brand-parfumcity-hq.png" alt="Parfum City" class="brand-logo-img" style="object-fit: contain;">
-                        </div>
-                        <div class="brand-logo-info">
-                            <span class="brand-logo-title">Parfum City</span>
-                            <span class="brand-logo-category">Парфумерія & Beauty</span>
-                        </div>
-                    </div>
-
-                    <div class="glass-box brand-logo-card">
-                        <div class="brand-logo-img-wrapper" style="background: rgba(255,255,255,0.04);">
-                            <img src="assets/images/brand-luxord-hq.png" alt="Luxor Home Care" class="brand-logo-img" style="object-fit: cover; border-radius: 12px;">
-                        </div>
-                        <div class="brand-logo-info">
-                            <span class="brand-logo-title">Luxord Home</span>
-                            <span class="brand-logo-category">Home Care & Декор</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="tiktok-cases-grid" style="grid-template-columns: repeat(5, 1fr); gap: 14px;">
-                <!-- Case 1: ТерноОпіля -->
-                <div class="tiktok-card">
-                    <div class="tiktok-card-thumb" style="height: 200px; background: rgba(0,0,0,0.4); display: flex; align-items: center; justify-content: center; padding: 10px;">
-                        <img src="assets/images/brand-ternopillya-transparent.png" alt="ТернОпілля" class="tiktok-cover-img" style="object-fit: contain; max-height: 180px;" loading="lazy">
+            <div class="v1-split-grid">
+                <!-- Left: Hero Player Card with Native 9:16 Vertical Video Frame -->
+                <div class="v1-hero-player">
+                    <div class="v1-hero-thumb-vertical">
+                        <img id="v1-hero-cover" src="assets/images/video1-cover.jpg" alt="Featured Case Cover" class="v1-hero-img">
+                        <a id="v1-hero-play-link" href="https://www.tiktok.com/@diana.scorpi/video/7665250133474315540" target="_blank" rel="noopener" class="video-play-icon">▶</a>
                         <div class="tiktok-overlay-gradient"></div>
-                        <div class="tiktok-badge-category" style="font-size: 9px; padding: 3px 7px;">Food & Beverage</div>
-                        <div class="tiktok-stats-bar" style="font-size: 10px; display: flex; justify-content: space-between; gap: 4px;">
-                            <span id="views-7665250133474315540">👁️ 25.3K</span>
-                            <span id="likes-7665250133474315540">❤️ 657</span>
+                        <div class="tiktok-badge-category" id="v1-hero-category">Beverage</div>
+                        <div class="tiktok-stats-bar" style="font-size: 11px; flex-direction: column; gap: 2px;">
+                            <span id="v1-hero-views">25.3K Переглядів</span>
+                            <span id="v1-hero-likes">657 Лайків</span>
                         </div>
                     </div>
-                    <div class="tiktok-card-body" style="padding: 12px;">
-                        <div class="tiktok-card-title" style="font-size: 14px;">ТернОпілля</div>
-                        <p class="tiktok-card-desc" style="font-size: 11px; margin-bottom: 10px;">Нативна інтеграція лимонадів «ТернОпілля».</p>
-                        <a href="https://www.tiktok.com/@diana.scorpi/video/7665250133474315540" target="_blank" rel="noopener" class="btn btn-glow tiktok-play-btn" style="padding: 8px; font-size: 11px;">
-                            ▶ TikTok ↗
-                        </a>
+
+                    <div class="v1-hero-content">
+                        <div>
+                            <h3 id="v1-hero-title" style="font-size: 22px; font-weight: 800; color: #fff; line-height: 1.25; margin-bottom: 8px;">Лимонади «ТернОпілля»</h3>
+                            <div style="margin-bottom: 12px;">
+                                <span id="v1-hero-tag" style="font-size: 11px; background: rgba(255, 46, 147, 0.2); color: var(--accent-pink); border: 1px solid rgba(255, 46, 147, 0.4); padding: 4px 12px; border-radius: 9999px; font-weight: 700; display: inline-block;">+25.3K FYP Reach</span>
+                            </div>
+                            <p id="v1-hero-desc" style="font-size: 13.5px; color: var(--text-muted); line-height: 1.5; margin-bottom: 18px;">Нативна літня інтеграція лимонадів «ТернОпілля» від компанії Опілля. Органічний сценарій пікніка з адаптацією під тренди TikTok.</p>
+                        </div>
+
+                        <div>
+                            <div style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; padding: 12px 16px; margin-bottom: 20px; display: flex; align-items: center; justify-content: space-between;">
+                                <div>
+                                    <div style="font-size: 10px; text-transform: uppercase; color: var(--text-muted); font-weight: 700;">Статус кейсу</div>
+                                    <div id="v1-hero-status" style="font-size: 13px; font-weight: 800; color: #4ade80;">Опубліковано</div>
+                                </div>
+                                <div>
+                                    <div style="font-size: 10px; text-transform: uppercase; color: var(--text-muted); font-weight: 700; text-align: right;">Джерело ЦА</div>
+                                    <div id="v1-hero-source" style="font-size: 13px; font-weight: 800; color: var(--accent-pink); text-align: right;">Рекомендації (FYP)</div>
+                                </div>
+                            </div>
+
+                            <a id="v1-hero-btn" href="https://www.tiktok.com/@diana.scorpi/video/7665250133474315540" target="_blank" rel="noopener" class="btn btn-glow" style="padding: 12px 24px; font-size: 13px; width: 100%; justify-content: center;">
+                                ▶ Переглянути ролик у TikTok ↗
+                            </a>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Case 2: Food Fest -->
-                <div class="tiktok-card">
-                    <div class="tiktok-card-thumb" style="height: 200px; background: rgba(0,0,0,0.4); display: flex; align-items: center; justify-content: center; padding: 10px;">
-                        <img src="assets/images/brand-foodfest-transparent.png" alt="Food Fest" class="tiktok-cover-img" style="object-fit: contain; max-height: 180px;" loading="lazy">
-                        <div class="tiktok-overlay-gradient"></div>
-                        <div class="tiktok-badge-category" style="font-size: 9px; padding: 3px 7px;">Events</div>
-                        <div class="tiktok-stats-bar" style="font-size: 10px; display: flex; justify-content: space-between; gap: 4px;">
-                            <span id="views-7652416548442852629">👁️ 20.3K</span>
-                            <span id="likes-7652416548442852629">❤️ 301</span>
+                <!-- Right: Interactive Brand Selection Menu -->
+                <div class="v1-brand-list">
+                    <div class="v1-brand-item active" onclick="selectCaseV1(0)">
+                        <div>
+                            <div style="font-size: 15px; font-weight: 800; color: #fff;">ТернОпілля</div>
+                            <div style="font-size: 11px; color: var(--text-muted); margin-top: 2px;">Лимонади & Напої</div>
                         </div>
+                        <span style="font-size: 12px; color: var(--accent-pink); font-weight: 700;" id="v1-side-views-0">25.3K</span>
                     </div>
-                    <div class="tiktok-card-body" style="padding: 12px;">
-                        <div class="tiktok-card-title" style="font-size: 14px;">Food Fest</div>
-                        <p class="tiktok-card-desc" style="font-size: 11px; margin-bottom: 10px;">Живий репортаж із фестивалю Food Fest.</p>
-                        <a href="https://www.tiktok.com/@diana.scorpi/video/7652416548442852629" target="_blank" rel="noopener" class="btn btn-glow tiktok-play-btn" style="padding: 8px; font-size: 11px;">
-                            ▶ TikTok ↗
-                        </a>
-                    </div>
-                </div>
 
-                <!-- Case 3: Hair Care -->
-                <div class="tiktok-card">
-                    <div class="tiktok-card-thumb" style="height: 200px;">
-                        <img src="assets/images/diana-cover.jpg" alt="Hair Care" class="tiktok-cover-img" style="object-fit: cover;" loading="lazy">
-                        <div class="tiktok-overlay-gradient"></div>
-                        <div class="tiktok-badge-category" style="font-size: 9px; padding: 3px 7px;">Beauty</div>
-                        <div class="tiktok-stats-bar" style="font-size: 10px; display: flex; justify-content: space-between; gap: 4px;">
-                            <span id="views-7639679991541665045">👁️ 13.9K</span>
-                            <span id="likes-7639679991541665045">❤️ 197</span>
+                    <div class="v1-brand-item" onclick="selectCaseV1(1)">
+                        <div>
+                            <div style="font-size: 15px; font-weight: 800; color: #fff;">Food Fest</div>
+                            <div style="font-size: 11px; color: var(--text-muted); margin-top: 2px;">Гастро Фестиваль</div>
                         </div>
+                        <span style="font-size: 12px; color: var(--accent-pink); font-weight: 700;" id="v1-side-views-1">20.3K</span>
                     </div>
-                    <div class="tiktok-card-body" style="padding: 12px;">
-                        <div class="tiktok-card-title" style="font-size: 14px;">Догляд Волосся</div>
-                        <p class="tiktok-card-desc" style="font-size: 11px; margin-bottom: 10px;">Естетичний огляд туторіалу догляду.</p>
-                        <a href="https://www.tiktok.com/@diana.scorpi/video/7639679991541665045" target="_blank" rel="noopener" class="btn btn-glow tiktok-play-btn" style="padding: 8px; font-size: 11px;">
-                            ▶ TikTok ↗
-                        </a>
-                    </div>
-                </div>
 
-                <!-- Case 4: Parfum City -->
-                <div class="tiktok-card">
-                    <div class="tiktok-card-thumb" style="height: 200px; background: rgba(255,255,255,0.95); display: flex; align-items: center; justify-content: center; padding: 10px;">
-                        <img src="assets/images/brand-parfumcity-hq.png" alt="Parfum City" class="tiktok-cover-img" style="object-fit: contain; max-height: 160px;" loading="lazy">
-                        <div class="tiktok-overlay-gradient"></div>
-                        <div class="tiktok-badge-category" style="font-size: 9px; padding: 3px 7px;">Perfumery</div>
-                        <div class="tiktok-stats-bar" style="font-size: 10px; display: flex; justify-content: space-between; gap: 4px;">
-                            <span id="views-7625945472674417941">👁️ 25.2K</span>
-                            <span id="likes-7625945472674417941">❤️ 476</span>
+                    <div class="v1-brand-item" onclick="selectCaseV1(2)">
+                        <div>
+                            <div style="font-size: 15px; font-weight: 800; color: #fff;">Догляд Волосся</div>
+                            <div style="font-size: 11px; color: var(--text-muted); margin-top: 2px;">Beauty & Care</div>
                         </div>
+                        <span style="font-size: 12px; color: var(--accent-pink); font-weight: 700;" id="v1-side-views-2">13.9K</span>
                     </div>
-                    <div class="tiktok-card-body" style="padding: 12px;">
-                        <div class="tiktok-card-title" style="font-size: 14px;">Parfum City</div>
-                        <p class="tiktok-card-desc" style="font-size: 11px; margin-bottom: 10px;">Огляд улюблених ароматів Parfum City.</p>
-                        <a href="https://www.tiktok.com/@diana.scorpi/video/7625945472674417941" target="_blank" rel="noopener" class="btn btn-glow tiktok-play-btn" style="padding: 8px; font-size: 11px;">
-                            ▶ TikTok ↗
-                        </a>
-                    </div>
-                </div>
 
-                <!-- Case 5: Luxor Home -->
-                <div class="tiktok-card">
-                    <div class="tiktok-card-thumb" style="height: 200px; background: rgba(255,255,255,0.05); display: flex; align-items: center; justify-content: center; padding: 10px;">
-                        <img src="assets/images/brand-luxord-hq.png" alt="Luxor Home" class="tiktok-cover-img" style="object-fit: contain; max-height: 180px; border-radius: 8px;" loading="lazy">
-                        <div class="tiktok-overlay-gradient"></div>
-                        <div class="tiktok-badge-category" style="font-size: 9px; padding: 3px 7px;">Home & Decor</div>
-                        <div class="tiktok-stats-bar" style="font-size: 10px; display: flex; justify-content: space-between; gap: 4px;">
-                            <span id="views-7624536127499717908">👁️ 13.3K</span>
-                            <span id="likes-7624536127499717908">❤️ 182</span>
+                    <div class="v1-brand-item" onclick="selectCaseV1(3)">
+                        <div>
+                            <div style="font-size: 15px; font-weight: 800; color: #fff;">Parfum City</div>
+                            <div style="font-size: 11px; color: var(--text-muted); margin-top: 2px;">Парфумерія & Beauty</div>
                         </div>
+                        <span style="font-size: 12px; color: var(--accent-pink); font-weight: 700;" id="v1-side-views-3">25.2K</span>
                     </div>
-                    <div class="tiktok-card-body" style="padding: 12px;">
-                        <div class="tiktok-card-title" style="font-size: 14px;">Luxor Home</div>
-                        <p class="tiktok-card-desc" style="font-size: 11px; margin-bottom: 10px;">Атмосферний затишний огляд Luxor Home.</p>
-                        <a href="https://www.tiktok.com/@diana.scorpi/video/7624536127499717908" target="_blank" rel="noopener" class="btn btn-glow tiktok-play-btn" style="padding: 8px; font-size: 11px;">
-                            ▶ TikTok ↗
-                        </a>
-                    </div>
-                </div>
-            </div>
 
-            <!-- Section 7 Viral Summary Banner -->
-            <div style="margin-top: 28px; background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border-color); border-radius: 18px; padding: 18px 24px; display: flex; align-items: center; justify-content: space-between; gap: 20px; backdrop-filter: blur(12px);">
-                <div style="display: flex; align-items: center; gap: 14px;">
-                    <div style="font-size: 28px; background: rgba(255, 46, 147, 0.15); padding: 10px; border-radius: 14px; border: 1px solid rgba(255, 46, 147, 0.3);">🚀</div>
-                    <div>
-                        <div style="font-size: 15px; font-weight: 800; color: var(--text-main);">100% Креатив та Нативна Подача</div>
-                        <div style="font-size: 12px; color: var(--text-muted);">Усі ролики розробляються за індивідуальним сценарієм з адаптацією під тренди TikTok</div>
-                    </div>
-                </div>
-                <div style="display: flex; gap: 20px; text-align: right;">
-                    <div>
-                        <div style="font-size: 18px; font-weight: 800; color: var(--accent-pink);">1.2M+</div>
-                        <div style="font-size: 11px; color: var(--text-muted);">Переглядів / місяць</div>
-                    </div>
-                    <div style="width: 1px; background: rgba(255,255,255,0.1);"></div>
-                    <div>
-                        <div style="font-size: 18px; font-weight: 800; color: var(--accent-pink);">93.6%</div>
-                        <div style="font-size: 11px; color: var(--text-muted);">Нова ЦА (FYP)</div>
+                    <div class="v1-brand-item" onclick="selectCaseV1(4)">
+                        <div>
+                            <div style="font-size: 15px; font-weight: 800; color: #fff;">Luxord Home</div>
+                            <div style="font-size: 11px; color: var(--text-muted); margin-top: 2px;">Home Care & Декор</div>
+                        </div>
+                        <span style="font-size: 12px; color: var(--accent-pink); font-weight: 700;" id="v1-side-views-4">13.3K</span>
                     </div>
                 </div>
             </div>
@@ -2629,13 +2696,99 @@
         document.addEventListener('DOMContentLoaded', animateCounters);
         animateCounters();
 
-        // Live TikTok Stats Auto-Fetcher (Option 1)
+        // Section 7 Interactive Hero Case Selector
+        const v1CasesData = [
+            {
+                title: "Лимонади «ТернОпілля»",
+                category: "Beverage",
+                views: "25.3K Переглядів",
+                likes: "657 Лайків",
+                tag: "+25.3K FYP Reach",
+                status: "Опубліковано",
+                source: "Рекомендації (FYP)",
+                desc: "Нативна літня інтеграція лимонадів «ТернОпілля» від компанії Опілля. Органічний сценарій пікніка з адаптацією під тренди TikTok.",
+                cover: "assets/images/video1-cover.jpg",
+                link: "https://www.tiktok.com/@diana.scorpi/video/7665250133474315540"
+            },
+            {
+                title: "Гастро Фестиваль Food Fest",
+                category: "Events",
+                views: "20.3K Переглядів",
+                likes: "301 Лайків",
+                tag: "+20.3K Live Event Reach",
+                status: "Опубліковано",
+                source: "Рекомендації (FYP)",
+                desc: "Яскравий анонс та живий репортаж із фестивалю Food Fest. Залучення студентської аудиторії та активні продажі квитків.",
+                cover: "assets/images/video2-cover.jpg",
+                link: "https://www.tiktok.com/@diana.scorpi/video/7652416548442852629"
+            },
+            {
+                title: "Догляд За Волоссям (Hair Care)",
+                category: "Beauty",
+                views: "13.9K Переглядів",
+                likes: "197 Лайків",
+                tag: "+13.9K High Engagement",
+                status: "Опубліковано",
+                source: "Рекомендації (FYP)",
+                desc: "Естетичний туторіал щоденного догляду за волоссям. Огляд доглядових засобів з високим рівнем довіри аудиторії.",
+                cover: "assets/images/video3-cover.jpg",
+                link: "https://www.tiktok.com/@diana.scorpi/video/7639679991541665045"
+            },
+            {
+                title: "Parfum City — Огляд Ароматів",
+                category: "Perfumery",
+                views: "25.2K Переглядів",
+                likes: "476 Лайків",
+                tag: "+25.2K • Промокод TIK927",
+                status: "Опубліковано",
+                source: "Рекомендації (FYP)",
+                desc: "Огляд ексклюзивної колекції парфумів з інтеграцією персонального промокоду. Висока конверсія в переходи та замовлення.",
+                cover: "assets/images/video4-cover.jpg",
+                link: "https://www.tiktok.com/@diana.scorpi/video/7625945472674417941"
+            },
+            {
+                title: "Luxord Home — Затишний Огляд",
+                category: "Home Care",
+                views: "13.3K Переглядів",
+                likes: "182 Лайків",
+                tag: "+13.3K Home Atmosphere",
+                status: "Опубліковано",
+                source: "Рекомендації (FYP)",
+                desc: "Атмосферне відео про генеральне прибирання та затишок у домі із засобами Luxord Home. Пряма рекомендація бренду.",
+                cover: "assets/images/video5-cover.jpg",
+                link: "https://www.tiktok.com/@diana.scorpi/video/7624536127499717908"
+            }
+        ];
+
+        function selectCaseV1(index) {
+            const data = v1CasesData[index];
+            if (!data) return;
+
+            document.querySelectorAll('.v1-brand-item').forEach((item, idx) => {
+                if (idx === index) item.classList.add('active');
+                else item.classList.remove('active');
+            });
+
+            document.getElementById('v1-hero-cover').src = data.cover;
+            document.getElementById('v1-hero-title').innerText = data.title;
+            document.getElementById('v1-hero-category').innerText = data.category;
+            document.getElementById('v1-hero-views').innerText = data.views;
+            document.getElementById('v1-hero-likes').innerText = data.likes;
+            document.getElementById('v1-hero-tag').innerText = data.tag;
+            document.getElementById('v1-hero-desc').innerText = data.desc;
+            document.getElementById('v1-hero-status').innerText = data.status;
+            document.getElementById('v1-hero-source').innerText = data.source;
+            document.getElementById('v1-hero-play-link').href = data.link;
+            document.getElementById('v1-hero-btn').href = data.link;
+        }
+
+        // Live TikTok Stats Auto-Fetcher
         const tiktokVideoIds = [
-            { id: '7665250133474315540', url: 'https://www.tiktok.com/@diana.scorpi/video/7665250133474315540' },
-            { id: '7652416548442852629', url: 'https://www.tiktok.com/@diana.scorpi/video/7652416548442852629' },
-            { id: '7639679991541665045', url: 'https://www.tiktok.com/@diana.scorpi/video/7639679991541665045' },
-            { id: '7625945472674417941', url: 'https://www.tiktok.com/@diana.scorpi/video/7625945472674417941' },
-            { id: '7624536127499717908', url: 'https://www.tiktok.com/@diana.scorpi/video/7624536127499717908' }
+            { id: '7665250133474315540', url: 'https://www.tiktok.com/@diana.scorpi/video/7665250133474315540', idx: 0 },
+            { id: '7652416548442852629', url: 'https://www.tiktok.com/@diana.scorpi/video/7652416548442852629', idx: 1 },
+            { id: '7639679991541665045', url: 'https://www.tiktok.com/@diana.scorpi/video/7639679991541665045', idx: 2 },
+            { id: '7625945472674417941', url: 'https://www.tiktok.com/@diana.scorpi/video/7625945472674417941', idx: 3 },
+            { id: '7624536127499717908', url: 'https://www.tiktok.com/@diana.scorpi/video/7624536127499717908', idx: 4 }
         ];
 
         async function fetchLiveTikTokMetrics() {
@@ -2653,15 +2806,28 @@
                     if (playMatch && playMatch[1]) {
                         const viewsNum = parseInt(playMatch[1], 10);
                         const viewsFormatted = viewsNum >= 1000 ? (viewsNum / 1000).toFixed(1) + 'K' : viewsNum;
-                        const vEl = document.getElementById('views-' + v.id);
-                        if (vEl) vEl.innerText = '👁️ ' + viewsFormatted;
+                        
+                        v1CasesData[v.idx].views = viewsFormatted + ' Переглядів';
+                        const sideEl = document.getElementById('v1-side-views-' + v.idx);
+                        if (sideEl) sideEl.innerText = viewsFormatted;
+
+                        const activeItem = document.querySelector('.v1-brand-item.active');
+                        if (activeItem && Array.from(document.querySelectorAll('.v1-brand-item')).indexOf(activeItem) === v.idx) {
+                            const heroV = document.getElementById('v1-hero-views');
+                            if (heroV) heroV.innerText = viewsFormatted + ' Переглядів';
+                        }
                     }
 
                     if (diggMatch && diggMatch[1]) {
                         const likesNum = parseInt(diggMatch[1], 10);
                         const likesFormatted = likesNum >= 1000 ? (likesNum / 1000).toFixed(1) + 'K' : likesNum;
-                        const lEl = document.getElementById('likes-' + v.id);
-                        if (lEl) lEl.innerText = '❤️ ' + likesFormatted;
+                        
+                        v1CasesData[v.idx].likes = likesFormatted + ' Лайків';
+                        const activeItem = document.querySelector('.v1-brand-item.active');
+                        if (activeItem && Array.from(document.querySelectorAll('.v1-brand-item')).indexOf(activeItem) === v.idx) {
+                            const heroL = document.getElementById('v1-hero-likes');
+                            if (heroL) heroL.innerText = likesFormatted + ' Лайків';
+                        }
                     }
                 } catch (err) {
                     // Graceful fallback to static pre-rendered values
