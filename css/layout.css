@@ -1,4 +1,4 @@
-/* Fullscreen Section Container with Scroll Snap */
+/* Fullscreen section container */
 .section-slide {
     min-height: 100vh;
     width: 100%;
@@ -10,8 +10,6 @@
     position: relative;
     border-bottom: 1px solid rgba(255, 255, 255, 0.03);
     overflow: hidden;
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
     box-sizing: border-box;
 }
 

@@ -10,6 +10,15 @@
      * further work for that element.
      */
     function initReveal() {
+        var elements = document.querySelectorAll('.glass-box, .section-title, .feature-card, .metric-big-num, .case-item-row');
+
+        if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            elements.forEach(function (el) {
+                el.classList.add('revealed');
+            });
+            return;
+        }
+
         var revealObserver = new IntersectionObserver(function (entries) {
             entries.forEach(function (entry) {
                 if (entry.isIntersecting) {
@@ -19,7 +28,7 @@
             });
         }, { threshold: 0.1 });
 
-        document.querySelectorAll('.glass-box, .section-title, .feature-card, .metric-big-num, .case-item-row').forEach(function (el) {
+        elements.forEach(function (el) {
             el.classList.add('reveal-element');
             revealObserver.observe(el);
         });

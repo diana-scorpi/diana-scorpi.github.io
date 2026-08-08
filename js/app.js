@@ -23,6 +23,7 @@
         if (MK.charts) MK.charts.init();
         if (MK.animations) MK.animations.init();
         if (MK.cases) MK.cases.init();
+        if (MK.slide4_1) MK.slide4_1.init();
 
         bindPrintButtons();
     }

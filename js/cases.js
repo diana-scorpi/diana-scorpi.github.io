@@ -10,7 +10,7 @@
 
     var brandItems = [];
     var heroCover, heroTitle, heroCategory, heroViews, heroLikes,
-        heroTag, heroDesc, heroStatus, heroSource, heroPlayLink, heroBtn;
+        heroTag, heroDesc, heroStatus, heroSource, heroPlayLink, heroBtn, syncStatus;
 
     /** Cache all hero-player and brand-list DOM references once. */
     function cacheDom() {
@@ -26,6 +26,7 @@
         heroSource = document.getElementById('v1-hero-source');
         heroPlayLink = document.getElementById('v1-hero-play-link');
         heroBtn = document.getElementById('v1-hero-btn');
+        syncStatus = document.querySelector('#case-sync-status .case-sync-text');
     }
 
     /**
@@ -37,8 +38,9 @@
         if (!data) return;
 
         brandItems.forEach(function (item, idx) {
-            if (idx === index) item.classList.add('active');
-            else item.classList.remove('active');
+            var isActive = idx === index;
+            item.classList.toggle('active', isActive);
+            item.setAttribute('aria-pressed', isActive ? 'true' : 'false');
         });
 
         heroCover.src = data.cover;
@@ -82,13 +84,15 @@
                 return res.json();
             })
             .then(function (data) {
-                if (!data) return;
+                if (!data) return false;
                 var html = data.contents || '';
+                var wasUpdated = false;
 
                 var diggMatch = html.match(/"diggCount":(\d+)/);
                 var playMatch = html.match(/"playCount":(\d+)/);
 
                 if (playMatch && playMatch[1]) {
+                    wasUpdated = true;
                     var viewsNum = parseInt(playMatch[1], 10);
                     var viewsFormatted = formatCompact(viewsNum);
 
@@ -103,6 +107,7 @@
                 }
 
                 if (diggMatch && diggMatch[1]) {
+                    wasUpdated = true;
                     var likesNum = parseInt(diggMatch[1], 10);
                     var likesFormatted = formatCompact(likesNum);
 
@@ -112,12 +117,16 @@
                         if (heroLikes) heroLikes.innerText = likesFormatted + ' Лайків';
                     }
                 }
+
+                return wasUpdated;
             })
             .catch(function () {
                 // Graceful fallback to static pre-rendered values (incl. abort/timeout)
+                return false;
             })
-            .then(function () {
+            .then(function (wasUpdated) {
                 clearTimeout(timeoutId);
+                return wasUpdated;
             });
     }
 
@@ -127,13 +136,24 @@
      * affects the others and no rejection is ever unhandled.
      */
     function fetchLiveTikTokMetrics() {
-        Promise.allSettled(tiktokVideoIds.map(fetchVideoMetrics));
+        Promise.allSettled(tiktokVideoIds.map(fetchVideoMetrics)).then(function (results) {
+            if (!syncStatus) return;
+
+            var updatedCount = results.filter(function (result) {
+                return result.status === 'fulfilled' && result.value;
+            }).length;
+
+            syncStatus.innerText = updatedCount > 0
+                ? 'Оновлено автоматично: ' + updatedCount + ' із ' + tiktokVideoIds.length
+                : 'Показано збережені дані';
+        });
     }
 
     /** Initialise the cases module. */
     function init() {
         cacheDom();
         bindBrandItems();
+        selectCaseV1(0);
         fetchLiveTikTokMetrics();
     }
 

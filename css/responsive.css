@@ -18,14 +18,6 @@
         grid-template-columns: 1fr 1fr;
     }
 
-    .cover-hero-title {
-        font-size: 48px;
-    }
-
-    .cover-portrait-wrapper img {
-        height: 480px;
-    }
-
     .section-slide {
         padding: 40px 6%;
     }
@@ -323,6 +315,12 @@
 /* Print / Export PDF styles */
 @media print {
 
+    html,
+    body {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
     .side-nav,
     .back-to-top,
     .toast,
@@ -342,5 +340,26 @@
 
     .section-slide {
         padding: 40px 20px !important;
+        break-after: page;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    .reveal-element {
+        opacity: 1;
+        transform: none;
     }
 }

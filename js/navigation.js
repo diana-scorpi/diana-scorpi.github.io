@@ -1,4 +1,4 @@
-/* navigation.js - Scroll spy, side-dot nav, wheel/keyboard slide transitions, back-to-top */
+/* navigation.js - Slide navigation, scroll spy and back-to-top */
 (function () {
     'use strict';
 
@@ -8,7 +8,7 @@
     var sideDots = [];
     var backToTopBtn = null;
     var currentSlideIndex = 0;
-    var isScrolling = false;
+    var isSlideTransitioning = false;
     var wheelCooldownTimer = null;
     var scrollTicking = false;
 
@@ -48,25 +48,26 @@
     }
 
     /**
-     * Smooth-scroll to a slide and update nav state, with a short cooldown
-     * during which wheel gestures are ignored.
+     * Scroll to a slide and update navigation state.
      * @param {number} index - Zero-based slide index.
      */
     function scrollToSlideFast(index) {
-        isScrolling = true;
+        if (!slides[index]) return;
+
+        isSlideTransitioning = true;
         currentSlideIndex = index;
         updateActiveDots(index);
 
         var targetY = slides[index].offsetTop;
         window.scrollTo({
             top: targetY,
-            behavior: 'smooth'
+            behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'
         });
 
         clearTimeout(wheelCooldownTimer);
         wheelCooldownTimer = setTimeout(function () {
-            isScrolling = false;
-        }, 350);
+            isSlideTransitioning = false;
+        }, 650);
     }
 
     /**
@@ -87,6 +88,8 @@
         var scrollPos = window.pageYOffset || document.documentElement.scrollTop;
         updateCurrentIndex();
 
+        if (!backToTopBtn) return;
+
         if (scrollPos > 400) {
             backToTopBtn.classList.add('visible');
         } else {
@@ -104,49 +107,22 @@
         });
     }
 
-    /**
-     * Wheel handler: hijacks the wheel to snap between full-screen slides.
-     * Must stay non-passive because it calls preventDefault().
-     * @param {WheelEvent} e
-     */
+    /** Move exactly one section per deliberate vertical wheel gesture. */
     function onWheel(e) {
-        e.preventDefault();
-        if (isScrolling) return;
-        if (Math.abs(e.deltaY) < 6) return;
+        if (Math.abs(e.deltaY) < 8 || Math.abs(e.deltaX) > Math.abs(e.deltaY)) return;
 
         updateCurrentIndex();
 
-        if (e.deltaY > 0) {
-            if (currentSlideIndex < slides.length - 1) {
-                currentSlideIndex++;
-                scrollToSlideFast(currentSlideIndex);
-            }
-        } else if (e.deltaY < 0) {
-            if (currentSlideIndex > 0) {
-                currentSlideIndex--;
-                scrollToSlideFast(currentSlideIndex);
-            }
-        }
-    }
+        var direction = e.deltaY > 0 ? 1 : -1;
+        var nextIndex = currentSlideIndex + direction;
 
-    /**
-     * Keyboard handler: Arrow/Page Up/Down snap between slides.
-     * @param {KeyboardEvent} e
-     */
-    function onKeydown(e) {
-        if (['ArrowDown', 'PageDown'].indexOf(e.code) !== -1) {
-            e.preventDefault();
-            if (currentSlideIndex < slides.length - 1) {
-                currentSlideIndex++;
-                scrollToSlideFast(currentSlideIndex);
-            }
-        } else if (['ArrowUp', 'PageUp'].indexOf(e.code) !== -1) {
-            e.preventDefault();
-            if (currentSlideIndex > 0) {
-                currentSlideIndex--;
-                scrollToSlideFast(currentSlideIndex);
-            }
-        }
+        // Keep normal browser scrolling before the first and after the last slide.
+        if (nextIndex < 0 || nextIndex >= slides.length) return;
+
+        e.preventDefault();
+        if (isSlideTransitioning) return;
+
+        scrollToSlideFast(nextIndex);
     }
 
     /** Bind click handlers to side-nav dots (native <button> elements). */
@@ -180,7 +156,7 @@
 
         window.addEventListener('scroll', onScrollThrottled, { passive: true });
         window.addEventListener('wheel', onWheel, { passive: false });
-        window.addEventListener('keydown', onKeydown);
+        onScroll();
     }
 
     window.MediaKit.navigation = {

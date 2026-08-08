@@ -12,6 +12,15 @@
      */
     function animateCounters() {
         var counters = document.querySelectorAll('.metric-big-num');
+
+        if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            counters.forEach(function (counter) {
+                counter.classList.add('counted');
+                counter.setAttribute('data-count', counter.innerText.trim());
+            });
+            return;
+        }
+
         var observer = new IntersectionObserver(function (entries) {
             entries.forEach(function (entry) {
                 if (entry.target.classList.contains('metric-age-pulse') || entry.target.classList.contains('metric-cities-badge')) {
@@ -24,7 +33,7 @@
                     var targetText = entry.target.getAttribute('data-count') || entry.target.innerText.trim();
                     entry.target.setAttribute('data-count', targetText);
 
-                    if (/\d+[\s--]+\d+/.test(targetText) || !/\d/.test(targetText)) {
+                    if (/\d+\s*-\s*\d+/.test(targetText) || !/\d/.test(targetText)) {
                         return;
                     }
 

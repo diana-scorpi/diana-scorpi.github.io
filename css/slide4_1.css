@@ -1,0 +1,186 @@
+/* Section 4.1: performance snapshot */
+
+.stats-live-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    margin-top: 36px;
+}
+
+.stats-live-card {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    position: relative;
+    overflow: hidden;
+}
+
+.stats-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.stats-brand-info {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.social-icon-wrapper {
+    width: 44px;
+    height: 44px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.insta-icon-bg {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    box-shadow: 0 4px 15px rgba(214, 36, 159, 0.3);
+}
+
+.insta-icon-bg svg {
+    color: #ffffff;
+}
+
+.tiktok-icon-bg {
+    background: rgba(18, 5, 18, 0.8);
+    border-color: rgba(255, 46, 147, 0.4);
+    box-shadow: 0 4px 15px rgba(255, 46, 147, 0.25);
+}
+
+.stats-platform-name {
+    font-family: 'Outfit', sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--text-main);
+    margin: 0;
+}
+
+.stats-platform-handle {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 13px;
+    color: var(--accent-purple);
+    font-weight: 600;
+}
+
+.stats-period-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: 'Outfit', sans-serif;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: var(--accent-pink);
+    background: rgba(255, 46, 147, 0.12);
+    border: 1px solid rgba(255, 46, 147, 0.3);
+    padding: 4px 12px;
+    border-radius: 9999px;
+}
+
+.stats-metrics-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.stat-mini-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 105, 180, 0.12);
+    border-radius: 16px;
+    padding: 16px 18px;
+    transition: background 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+}
+
+.stat-mini-card:hover {
+    background: rgba(255, 230, 243, 0.06);
+    border-color: rgba(255, 46, 147, 0.35);
+    transform: translateY(-2px);
+}
+
+.stat-mini-label {
+    display: block;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 12px;
+    color: var(--text-muted);
+    font-weight: 500;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.stat-mini-value {
+    font-family: 'Outfit', sans-serif;
+    font-size: 26px;
+    font-weight: 800;
+    color: var(--text-main);
+    letter-spacing: -0.5px;
+}
+
+.stats-chart-wrapper {
+    background: rgba(18, 5, 18, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 16px;
+    padding: 16px 18px 12px 18px;
+}
+
+.stats-chart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.chart-title {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 12px;
+    color: var(--text-muted);
+    font-weight: 600;
+}
+
+.chart-trend {
+    font-family: 'Outfit', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.chart-trend.positive {
+    color: #22c55e;
+}
+
+.stats-sparkline {
+    width: 100%;
+    height: 60px;
+    overflow: visible;
+}
+
+/* Sparkline animation when revealed */
+.section-slide#live-stats .stats-sparkline path:last-child {
+    stroke-dasharray: 400;
+    stroke-dashoffset: 400;
+    transition: stroke-dashoffset 1.8s ease-in-out 0.2s;
+}
+
+.section-slide#live-stats.revealed .stats-sparkline path:last-child,
+.section-slide#live-stats .stats-sparkline.sparkline-animated path:last-child {
+    stroke-dashoffset: 0;
+}
+
+/* Responsive styles for Section 4.1 */
+@media (max-width: 1024px) {
+    .stats-live-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    .stats-metrics-grid {
+        grid-template-columns: 1fr;
+    }
+}
