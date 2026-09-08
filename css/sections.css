@@ -255,8 +255,9 @@
 
 .hero-stats-bar-vertical {
     font-size: 11px;
-    flex-direction: column;
-    gap: 2px;
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
 }
 
 .hero-case-title {

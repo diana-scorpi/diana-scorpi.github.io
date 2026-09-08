@@ -1,15 +1,16 @@
 :root {
-    --bg-dark: #120512;
-    --bg-card: rgba(255, 255, 255, 0.04);
-    --bg-card-hover: rgba(255, 230, 243, 0.09);
-    --border-color: rgba(255, 105, 180, 0.2);
-    --border-accent: rgba(255, 46, 147, 0.6);
-    --accent-purple: #ff2e93;
-    --accent-indigo: #ff4d94;
-    --accent-cyan: #ff75b5;
-    --accent-pink: #ff80bf;
-    --text-main: #ffffff;
-    --text-muted: #e2c0d5;
-    --gradient-primary: linear-gradient(135deg, #ff2e93 0%, #d946ef 50%, #ff529a 100%);
-    --gradient-glow: radial-gradient(circle, rgba(255, 46, 147, 0.35) 0%, rgba(0, 0, 0, 0) 75%);
+    --bg-dark: #0d0713;
+    --bg-card: rgba(255, 255, 255, 0.045);
+    --bg-card-hover: rgba(255, 255, 255, 0.08);
+    --border-color: rgba(255, 255, 255, 0.12);
+    --border-accent: rgba(255, 79, 163, 0.72);
+    --accent-purple: #a779ff;
+    --accent-indigo: #8f72ff;
+    --accent-cyan: #8fe7ff;
+    --accent-pink: #ff4fa3;
+    --text-main: #fff9fd;
+    --text-muted: #d8cadc;
+    --text-subtle: #b6a4be;
+    --gradient-primary: linear-gradient(135deg, #ff4fa3 0%, #a779ff 100%);
+    --gradient-glow: radial-gradient(circle, rgba(255, 79, 163, 0.28) 0%, rgba(0, 0, 0, 0) 72%);
 }

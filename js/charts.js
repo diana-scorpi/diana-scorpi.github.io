@@ -15,7 +15,7 @@
             data: {
                 labels: ['Не підписники (FYP)', 'Підписники'],
                 datasets: [{
-                    data: [93.6, 6.4],
+                    data: [66.2, 33.8],
                     backgroundColor: ['#ff2e93', 'rgba(255, 255, 255, 0.12)'],
                     borderWidth: 0,
                     hoverOffset: 6

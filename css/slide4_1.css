@@ -63,7 +63,7 @@
 }
 
 .stats-platform-handle {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: 'DM Sans', sans-serif;
     font-size: 13px;
     color: var(--accent-purple);
     font-weight: 600;
@@ -106,7 +106,7 @@
 
 .stat-mini-label {
     display: block;
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: 'DM Sans', sans-serif;
     font-size: 12px;
     color: var(--text-muted);
     font-weight: 500;
@@ -138,7 +138,7 @@
 }
 
 .chart-title {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: 'DM Sans', sans-serif;
     font-size: 12px;
     color: var(--text-muted);
     font-weight: 600;
@@ -160,16 +160,27 @@
     overflow: visible;
 }
 
-/* Sparkline animation when revealed */
-.section-slide#live-stats .stats-sparkline path:last-child {
+/* Sparkline animation when revealed.
+   JS (slide4_1.js) observes #live-stats (a div) and adds .sparkline-animated
+   to each .stats-sparkline. Scoped to .stats-live-grid to avoid bleeding into
+   any future sparkline elements elsewhere on the page. */
+.stats-live-grid .stats-sparkline path:last-child {
     stroke-dasharray: 400;
     stroke-dashoffset: 400;
     transition: stroke-dashoffset 1.8s ease-in-out 0.2s;
 }
 
-.section-slide#live-stats.revealed .stats-sparkline path:last-child,
-.section-slide#live-stats .stats-sparkline.sparkline-animated path:last-child {
+.stats-live-grid .stats-sparkline.sparkline-animated path:last-child {
     stroke-dashoffset: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .stats-live-grid .stats-sparkline path:last-child {
+        transition: none;
+    }
+    .stats-live-grid .stats-sparkline.sparkline-animated path:last-child {
+        stroke-dashoffset: 0;
+    }
 }
 
 /* Responsive styles for Section 4.1 */
